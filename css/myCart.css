@@ -1,4 +1,4 @@
-body {
+/* body {
     background-color: cornsilk;
     margin:auto 20px auto 20px;
     position: relative ;
@@ -12,7 +12,7 @@ body {
 
 /* header */
 
-
+/* 
 header {
     text-align: center;
     background: #202020;
@@ -50,12 +50,13 @@ header {
   }
   header nav ul li:hover {
     background-color: #57575745;
-  }
+  } */ 
  
  
- main{
-   height:1000px;
+ main {
+  top: 100px;
  }
+  
  
  h6{
    font-size: 18px;
@@ -100,6 +101,7 @@ header {
    text-align:center;
    border: black solid ;
    padding-top: 20px;
+   margin-top: 20px;
 
  }
  
@@ -109,7 +111,6 @@ header {
    border-radius: 5px;
    margin-top: 20px;
  }
- 
  
  
  

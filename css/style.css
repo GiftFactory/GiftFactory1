@@ -1,82 +1,226 @@
-body {
-    background-color: cornsilk;
+body *{
+  /* border: solid 2px blue; */
+  margin: -1px 48px 10px 20px;
+  /* position: relative; */
+}
+main {
+  position: absolute;
+  top: 69px;
+    background-color:#faf3e0;
     margin:auto 20px auto 20px;
     position: relative ;
-    align-items: center;
-    text-align: center;
+    /* align-items: center;
+    text-align: center; */
 }
 /* body *{
-  border: solid 2px  #d32727;
+  border: solid 2px  #D32727;
 } */
-
-
 /* header */
 header {
-    text-align: center;
-    background: #202020;
-    color: #000;
-    margin-bottom: 20px;
-    box-shadow:  #57575745; ;
+  z-index: 9999;
+  position: fixed;
+  left: -20px;
+  top: -4px;
+  height: 107px;
+  /* text-align: center; */
+  /* background-image: url(../images/background.jpg);  color: #000; */
+  background-color:#1e212d;
+  /* z-index: 0%; */
+  margin-bottom: 20px;
+  box-shadow: 0px 15px 10px #b7b7ae73;  width: 100%;
+  align-items: center;
+  display: inline-flex;
+  background-position: center;
+}
+  header nav  {
+    width: 70%;
+    margin: 100px auto auto 20%;
   }
-  header nav ul {
-    list-style: none;
-  }
-
   #cartQtyIcon{
-
   }
   header nav ul li {
     display: inline-block;
-    padding: 35px;
-    padding-left: 30px;
-    padding-right: 30px;
-  }
-  
-  header nav ul li  {
-    
+    /* padding: 35px;
+    padding-left: 30px; */
+    /* padding-right: 30px; */
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-decoration: none;
     color: rgb(255, 255, 255);
     font-size: 25px;
     font-weight: 100;
+    margin-left: 2%;
+    margin-right: 2%;
+    /* margin-bottom:  20%; */
   }
-
   a{
     text-decoration: none;
-    position: relative;
     color:white;
   }
   header nav ul li:hover {
     background-color: #57575745;
   }
-
   /* main */
-  #sceOrder{
+  /* #sceOrder{
     position: relative;
-    right:200px;
-   
-  }
-  
-#firstPlace{position:relative;
-  right:148px;
-
-}
-
-#secondPlace{
+    right:200px; */
+/* #firstPlace{position:relative;
+  right:148px; */
+/* #secondPlace{
   position:relative;
   left:148px;
-}
-
-
-
-
+} */
   /* footer */
-  footer{
+  footer {
     clear: both;
-    color: #ffffff;
+    color: #FFFFFF;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-align: center;
-    padding: 20px;
-    background-color: #000000;
-    margin-top: 20px;
-  }
+    padding-top: 7px;
+    padding-bottom: 1px;
+    background-color:#b68973;
+    margin-top: 584px;
+    width: 100%;
+    margin-left: 0%;
+    /* margin-bottom: 20%; */
+    /* width: 100%; */
+}
+/* new css */
+  /* #mainImage{
+width: 50%; 
+height: 10%;
+align-items: center;
+} */
+#logoName{
+  font-family: 'Sacramento', cursive;
+  font-size: 100%;
+  color: #FFFFFF;
+  /*position: relative;*/
+  /* left: 10%; */
+  /* margin-right: 30%; */
+}
+#logo{
+  font-family: 'Sacramento', cursive;
+  font-size: 190%;
+  color: #FFFFFF;
+  display:inline-flex;
+  align-items: center;
+  position: absolute;
+  width: 260px;
+  padding: 1px;
+}
+#logo img{
+  width: 92px;
+  margin: -17px;
+  margin-top: -2%;
+}
+#logo p{
+  margin: 8px;
+  margin-top: 23%;
+  font-size: 105%;
+}
+/* 
+#home{
+  margin-left: 5%;
+  margin-right: 5%;
+}
+#ContactUs{
+  margin-left: 5%;
+  margin-right: 5%;
+}
+#AboutUs{
+  margin-left: 5%;
+  margin-right: 5%;
+} */
+#cart{
+  font-family: 'Sacramento', cursive;
+  position:absolute;
+  right: -8px;
+  font-size:100%;
+  color: #FFFFFF;
+  display:block;
+  align-items: center;
+  margin-top: 3%;
+  /* margin-right: 30%; */
+  padding: 1px;
+}
+#cart img{
+  width: 40px;
+    height: 45px;
+  margin-top: 10%;
+  /* margin-left: 10%; */
+}
+#cartName{
+  font-family: 'Sacramento', cursive;
+  font-size: 170%;
+  color: #FFFFFF;
+  /* font-weight: bold; */
+  /* padding-top: 10%; */
+}
+#cart a {
+  display: flex;
+  margin: -21px;
+  padding:0px;
+  align-items: center;
+}
+#cart a *{
+  margin: 0px;
+  padding:0px;
+}
+/* main section img{
+  width: 25%; 
+height: 70%;
+align-items: center;
+}
+#mainImage2 {
+  width: 21%;
+  height: 80%;
+} */
+#firstPlace{
+  clear: both;
+  position:relative;
+  left: 0%;
+  max-width: 50%;
+  height: auto;
+}
+#secondPlace {
+  position: absolute;
+  left: 60%;
+  max-width: 35%;
+  height: auto;
+  top: 63%;
+  padding-top: 0%;
+  padding-bottom: 0%;
+}
+#secMain {
+   padding: 15%;
+   background-size: 100%;
+   background-image: url(../images/slide1.jpg);
+   background-position: center;
+ }
+#secPopular {
+  padding-top: 7%;
+  padding-bottom: 5%;
+  text-align: center;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 150%;
+  position: absolute;
+}
+.imgPop {
+  padding-left: 0%;
+  max-width: 21%;
+  height: auto;
+}
+#secOrder {
+  margin: 20% 30% -5% 0%;
+  margin-top: -2%;
+  margin-bottom: -6%;
+}
+/* #pop{
+  background-color: rgb(238, 115, 115);
+} */
+ul{
+  margin-top: -4%;
+}
+body{
+  background-color: #FAF3E0;
+}
