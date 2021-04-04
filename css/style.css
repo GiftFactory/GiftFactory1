@@ -1,0 +1,82 @@
+body {
+    background-color: cornsilk;
+    margin:auto 20px auto 20px;
+    position: relative ;
+    align-items: center;
+    text-align: center;
+}
+/* body *{
+  border: solid 2px  #d32727;
+} */
+
+
+/* header */
+header {
+    text-align: center;
+    background: #202020;
+    color: #000;
+    margin-bottom: 20px;
+    box-shadow:  #57575745; ;
+  }
+  header nav ul {
+    list-style: none;
+  }
+
+  #cartQtyIcon{
+
+  }
+  header nav ul li {
+    display: inline-block;
+    padding: 35px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  
+  header nav ul li  {
+    
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    font-weight: 100;
+  }
+
+  a{
+    text-decoration: none;
+    position: relative;
+    color:white;
+  }
+  header nav ul li:hover {
+    background-color: #57575745;
+  }
+
+  /* main */
+  #sceOrder{
+    position: relative;
+    right:200px;
+   
+  }
+  
+#firstPlace{position:relative;
+  right:148px;
+
+}
+
+#secondPlace{
+  position:relative;
+  left:148px;
+}
+
+
+
+
+  /* footer */
+  footer{
+    clear: both;
+    color: #ffffff;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+    background-color: #000000;
+    margin-top: 20px;
+  }

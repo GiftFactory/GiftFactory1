@@ -1,0 +1,125 @@
+body {
+    background-color: cornsilk;
+    margin:auto 20px auto 20px;
+    position: relative ;
+    align-items: center;
+    text-align: center;
+}
+/* body *{
+  border: solid 2px  #d32727;
+  
+} */
+
+/* header */
+
+
+header {
+    text-align: center;
+    background: #202020;
+    color: #000;
+    margin-bottom: 20px;
+    box-shadow:  #57575745; ;
+  }
+  header nav ul {
+    list-style: none;
+  }
+
+  #cartQtyIcon{
+
+  }
+  header nav ul li {
+    display: inline-block;
+    padding: 35px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  
+  header nav ul li  {
+    
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    font-weight: 100;
+  }
+
+  a{
+    text-decoration: none;
+    position: relative;
+    color:white;
+  }
+  header nav ul li:hover {
+    background-color: #57575745;
+  }
+ 
+ 
+ main{
+   height:1000px;
+ }
+ 
+ h6{
+   font-size: 18px;
+   position: relative;
+   color:white;
+   left:365px;
+ bottom:102px;}
+ 
+ 
+ 
+ 
+ 
+  td,tr,th{
+   border:solid black 2px;
+   width:100px;
+   height:25px;
+
+ }
+ 
+ input{
+   width:75px;
+ }
+ 
+ img{
+   height:200%;
+   width:90%;
+  
+ }
+ 
+ table{
+   text-align: center;
+   border: solid;
+   margin-left: 165px;
+   width:75%;
+   
+ }
+
+ #cartTable
+ {
+   height:1000px;
+   width:100%;
+   text-align:center;
+   border: black solid ;
+   padding-top: 20px;
+
+ }
+ 
+ button{
+   height:45%;
+   background-color: brown;
+   border-radius: 5px;
+   margin-top: 20px;
+ }
+ 
+ 
+ 
+ 
+ /* footer */
+ footer{
+    clear: both;
+    color: #ffffff;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+    background-color: #000000;
+    margin-top: 20px;
+  }

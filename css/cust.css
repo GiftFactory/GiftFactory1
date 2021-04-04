@@ -1,0 +1,111 @@
+#secGiftBuilder{
+    position: relative;
+    display:flex;
+    height:400px;
+    padding: 10px;
+}
+.giftCate{
+    border: 1px solid gray;
+border-radius: 5px;
+    position: relative;
+    float: left;
+    width: 25%;
+    padding: 3px;
+    overflow-y: scroll;
+
+    
+}
+#x{
+    position: absolute;
+    left: 350px;
+    background-color: hotpink;
+    width: 72%;
+    height: 95%;
+}
+.giftItems{
+    border: 1px solid gray;
+    border-radius: 5px;
+    position: relative;
+    display: inline-flex;
+    float:right;
+    width: 85%;
+    margin-left: 5px;
+    height: 99%;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+    text-align: center;
+    justify-content:space-around;
+    top: 10px;display: none;
+}
+
+.cate{
+    position: relative;
+    text-align: center;
+    align-items: center;
+    height: 200px;
+    margin: 3px;
+}
+.cate img{
+    margin:1px;
+    display: block;
+    position:absolute;
+    width: 95%;
+    height: 95%;
+}
+.cate p{
+    display: block;
+    position:absolute;
+    bottom: 10%;
+    text-align: center;
+    width: 95%;
+}
+.giftItem{
+position: relative;
+text-align: center;
+align-content: center;
+width: 22%;
+height: 60%;
+margin: 1%;
+padding: 2px;
+border: 1px solid gray;
+border-radius: 5px;
+}
+.giftItem img{
+    position:absolute;
+    display: block;
+    margin:1px;
+    width: 95%;
+    height: 65%;
+}
+.giftItem p{
+    
+    display: block;
+    position:absolute;
+    bottom: 40%;
+    text-align: center;
+    width: 95%;
+    margin: 2px;
+}
+
+.giftItem .button{
+    position: absolute;
+    width: 80%;
+    bottom: 2PX;
+    margin:auto 10% auto 10%;
+    text-align: center;
+    left: 0;
+    font-size: 17px;
+}
+.giftItem .ItmQty{
+    position: absolute;
+    
+    border-radius: 7px;
+    width: 80%;
+    bottom: 15%;
+    margin:auto 7% auto 7%;
+    text-align: center;
+    left: 0;
+    font-size: 17px;}
+    #cate1:hover+#giftItems1{
+        display:inline-flex;
+    }
