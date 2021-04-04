@@ -61,9 +61,10 @@ header {
  h6{
    font-size: 18px;
    position: relative;
-   color:red;
-   left:365px;
- bottom:102px;}
+   color:white;
+   left:20px;
+   bottom:7.5px
+  }
  
  
  
@@ -96,7 +97,7 @@ header {
 
  #cartTable
  {
-   height:1000px;
+   height:100%;
    width:100%;
    text-align:center;
    border: black solid ;
@@ -115,7 +116,7 @@ header {
  
  
  /* footer */
- footer{
+ /* footer{
     clear: both;
     color: #ffffff;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -123,4 +124,8 @@ header {
     padding: 20px;
     background-color: #000000;
     margin-top: 20px;
-  }
+  } */
+
+
+
+  
