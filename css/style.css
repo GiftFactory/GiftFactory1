@@ -43,7 +43,7 @@ header {
     /* padding: 35px;
     padding-left: 30px; */
     /* padding-right: 30px; */
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Open Sans Condensed', sans-serif;
     text-decoration: none;
     color: rgb(255, 255, 255);
     font-size: 25px;
@@ -178,18 +178,19 @@ align-items: center;
 #firstPlace{
   clear: both;
   position:relative;
-  left: 0%;
-  max-width: 50%;
+  left: -4%;
+  max-width: 100%;
   height: auto;
 }
 #secondPlace {
   position: absolute;
-  left: 60%;
-  max-width: 35%;
+  right:-4%;
+  max-width: 100%;
   height: auto;
-  top: 63%;
+  top: 0%;
   padding-top: 0%;
   padding-bottom: 0%;
+
 }
 #secMain {
    padding: 15%;
@@ -198,10 +199,10 @@ align-items: center;
    background-position: center;
  }
 #secPopular {
-  padding-top: 7%;
+  padding-top: 6%;
   padding-bottom: 5%;
   text-align: center;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: 'Open Sans Condensed', sans-serif;
   font-size: 150%;
   position: absolute;
 }
@@ -214,13 +215,73 @@ align-items: center;
   margin: 20% 30% -5% 0%;
   margin-top: -2%;
   margin-bottom: -6%;
+  display: flex;
+  width: 100%;
+  position: relative;
 }
 /* #pop{
   background-color: rgb(238, 115, 115);
 } */
 ul{
   margin-top: -4%;
+
 }
 body{
   background-color: #FAF3E0;
+}
+
+.con {
+  width: 500px;
+  position: relative;
+  }
+
+  .text {
+  position: absolute;
+  top: 0px;
+  font-size: 34px;
+  background-color: #0000008c;
+  color: white;
+  width: 100%;
+  text-align: center;
+  height:97%;
+  /* right:-10; */
+  left:-4%;
+}
+   p.p1 {
+  margin-top: 150px;
+  font-family: 'Open Sans Condensed', sans-serif;
+
+  }
+  .con1 {
+    width: 500px;
+    position: relative;
+    z-index: 10;
+    right: -160px;
+    }
+  
+    .text1 {
+      position: absolute;
+      /* top: -355px; */
+      font-size: 34px;
+      background-color: #0000008c;
+      color: white;
+      width: 100%;
+      text-align: center;
+      height: 97%;
+      left: -10%;
+  }
+  p.p2 {
+    margin-top: 150px;
+    font-family: 'Open Sans Condensed', sans-serif;
+
+    }
+  #brief{
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 29px;
+    background: #faf3e07a;
+}
+h2{
+  font-family: 'Open Sans Condensed', sans-serif;
+  background-color: #eabf9f;
+  font-size: 200%;
 }
