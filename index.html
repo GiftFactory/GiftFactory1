@@ -20,8 +20,8 @@
     <nav>
       <ul>
         <!-- <li><img id="logo" src="images/4.2.png"> <h1 id="logoName">Gift Factory</h1> </li> -->
-        <li id="home"><a href="#">Home</a></li>
-        <li><a href="#">Our Gifts</a></li>
+        <li id="home"><a href="http://127.0.0.1:5502/index.html">Home</a></li>
+        <li><a href="http://127.0.0.1:5502/customized.html">Our Gifts</a></li>
         <li id="ContactUs"><a href="#">Contact Us</a></li>
         <li id="AboutUs"><a href="#">About Us</a></li>
       </ul>
@@ -61,12 +61,37 @@
       </section>
       <br>
       <br>
-      <section id="secPopular">
+      <section class="Title">
         <h2> Popular gift' orders: </h2>
-        <br>
-        <img class="imgPop" src="./images/backage 2.jpg" alt="" srcset="">
-        <img class="imgPop" src="./images/backage 3.jpg" alt="" srcset="">
-        <img class="imgPop" src="./images/backage 4.jpg" alt="" srcset="">
+      </section>
+      <section id="secPopular">
+        <div class="slidershow middle">
+          <div class="slides">
+              <input type="radio" name="r" id="r1" checked>
+              <input type="radio" name="r" id="r2">
+              <input type="radio" name="r" id="r3">
+              <input type="radio" name="r" id="r4">
+
+              <div class="slide s1">
+                  <img src="slideImages/fl-backage 1 (7).jpg" alt="" srcset="">
+              </div>
+              <div class="slide">
+                  <img src="slideImages/fl-backage 1 (9).jpg" alt="" srcset="">
+              </div>
+              <div class="slide">
+                  <img src="slideImages/fl-backage 1 (10).jpg" alt="" srcset="">
+              </div>
+              <div class="slide">
+                  <img src="slideImages/fl-backage 1 (12).jpg" alt="" srcset="">
+              </div>
+          </div>
+          <div class="navigation">
+              <label for="r1" class="bar"></label>
+              <label for="r2" class="bar"></label>
+              <label for="r3" class="bar"></label>
+              <label for="r4" class="bar"></label>
+              </div>
+      </div>
       </section>
     </main>
     <br>

@@ -179,13 +179,13 @@ align-items: center;
   clear: both;
   position:relative;
   left: -4%;
-  max-width: 100%;
+  max-width: 116%;
   height: auto;
 }
 #secondPlace {
   position: absolute;
   right:-4%;
-  max-width: 100%;
+  max-width: 115%;
   height: auto;
   top: 0%;
   padding-top: 0%;
@@ -199,8 +199,9 @@ align-items: center;
    background-position: center;
  }
 #secPopular {
-  padding-top: 6%;
+  /* padding-top: 6%; */
   padding-bottom: 5%;
+  padding-left: 35%;
   text-align: center;
   font-family: 'Open Sans Condensed', sans-serif;
   font-size: 150%;
@@ -239,9 +240,9 @@ body{
   position: absolute;
   top: 0px;
   font-size: 34px;
-  background-color: #0000008c;
+  background-color: #0000005e;
   color: white;
-  width: 100%;
+  width: 116%;
   text-align: center;
   height:97%;
   /* right:-10; */
@@ -263,12 +264,12 @@ body{
       position: absolute;
       /* top: -355px; */
       font-size: 34px;
-      background-color: #0000008c;
+      background-color: #0000005e;
       color: white;
-      width: 100%;
+      width: 116%;
       text-align: center;
       height: 97%;
-      left: -10%;
+      left: -26%;
   }
   p.p2 {
     margin-top: 150px;
@@ -284,4 +285,84 @@ h2{
   font-family: 'Open Sans Condensed', sans-serif;
   background-color: #eabf9f;
   font-size: 200%;
+  height: 10%;
 }
+
+/* slider  */
+.slidershow{
+  width: 700px;
+  height: 400px;
+  overflow: hidden;
+  margin-left: 400px;
+  margin-top: 230px;
+}
+
+.middle{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.navigation {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translate(-50%);
+  display:flex;
+}
+.bar {
+  width: 50px;
+  height: 10px;
+  border: 2px solid #fff;
+  margin: 6px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+.bar:hover{
+  background: cornsilk;
+}
+input[name='r']{
+  position: absolute; 
+  visibility: hidden;
+}
+.slides{
+  width: 514%;
+  height: 100%;
+  display: flex;
+  margin-left: -18px;
+}
+.slide{
+  width: 20%;
+  transition: 0.6s;
+  margin: 0px;
+}
+.slide img{
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+}
+
+#r1:checked~.s1{
+  margin-left: 0px;
+}
+#r2:checked~.s1{
+  margin-left: -20%;
+}
+#r3:checked~.s1{
+  margin-left: -40%;
+}
+#r4:checked~.s1{
+  margin-left: -60%;
+}
+
+/* slider  */
+.Title {
+  padding-top: 5%;
+  text-align: center;
+  font-size: 150%;
+  width: 101%;
+  margin-left: 0;
+  
+
+}
+
