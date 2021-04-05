@@ -152,16 +152,19 @@ header {
 
  }
  
- /* footer */
- /* footer{
-    clear: both;
-    color: #ffffff;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    text-align: center;
-    padding: 20px;
-    background-color: #000000;
-    margin-top: 20px;
-  } */
+
+ footer{
+  clear: both;
+  color: #FFFFFF;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  text-align: center;
+  padding-top: 7px;
+  padding-bottom: 1px;
+  background-color:#000000;
+  margin-top: 584px;
+  width: 100%;
+  margin-left: 0%;
+  }
 
 
 
@@ -197,6 +200,7 @@ header {
     font-family: 'Open Sans Condensed', sans-serif;
     font-size: 200%;
 }
+
 
 
 
@@ -274,3 +278,4 @@ header {
 .method{
   display: inline;
 }
+
