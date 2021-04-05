@@ -284,3 +284,12 @@ function updateTotal(){
 //   max = Math.floor(max);
 //   return Math.floor(Math.random() * (max - min + 1) + min);
 // }
+
+
+function openForm() {
+  document.getElementById('myForm').style.display = 'block';
+}
+
+function closeForm() {
+  document.getElementById('myForm').style.display = 'none';
+}
