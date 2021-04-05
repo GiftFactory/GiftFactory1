@@ -3,7 +3,7 @@
 let itemPrice=0;
 let clicks = 0;
 let chooseArray = [' flowers', 'chocolate', 'candeys',' cosmetics','Books',' Unusual gifts',];
-const giftcolors = ['black' , 'white' , 'blue','green','pink','purple','red','yellow'];
+const giftcolors = ['black' , 'white' , 'blue','green','fuchsia','purple','red','yellow'];
 
 // *************************getting the elements from HTML
 
@@ -21,6 +21,8 @@ const colorsID = document.getElementById('forColors');
 const ageSection =document.getElementById('age');
 
 startButoon.addEventListener('click', function(){
+
+
   const h1El = document.createElement('h1');
   ageSection.appendChild(h1El);
   h1El.textContent='Enter his/her age';
@@ -41,16 +43,23 @@ startButoon.addEventListener('click', function(){
 // ******************************adding event listener for the first next button***showing occasion question:
 
 function next1(){
+
   const firstNext = document.createElement('button');
   ageSection.appendChild(firstNext);
   firstNext.textContent='NEXT';
+
   firstNext.addEventListener('click', function(){
+    const hrEl = document.createElement('hr');
+    ageSection.appendChild(hrEl);
+
     const h1El = document.createElement('h1');
     occasionSection.appendChild(h1El);
     h1El.textContent='What is the Occasion for the gift?';
 
     const inputEl = document.createElement('input');
     occasionSection.appendChild(inputEl);
+    inputEl.placeholder='Birthday,Wedding...etc.';
+
     next2 ();
 
   } , {once:true});
@@ -59,6 +68,7 @@ function next1(){
 // ******************************adding event listener for the second next button ***showing likes question:
 
 function next2 (){
+
   const br4 = document.createElement('br');
   occasionSection.appendChild(br4);
   const br5 = document.createElement('br');
@@ -67,6 +77,9 @@ function next2 (){
   occasionSection.appendChild(firstNext);
   firstNext.textContent='NEXT';
   firstNext.addEventListener('click', function(){
+    const hrEl = document.createElement('hr');
+    likesSecion.appendChild(hrEl);
+
     const h1El = document.createElement('h1');
     likesSecion.appendChild(h1El);
     h1El.textContent='Select what does he/she like';
@@ -96,6 +109,9 @@ function next3(){
   likesSecion.appendChild(secondNext);
   secondNext.textContent= 'NEXT';
   secondNext.addEventListener('click', function () {
+    const hrEl = document.createElement('hr');
+    choosecolorSecion.appendChild(hrEl);
+
     const h1El =document.createElement('h1');
     choosecolorSecion.appendChild(h1El);
     h1El.textContent='Now choose the color of your box gift';
@@ -108,6 +124,9 @@ function next3(){
       selection.appendChild(colorsEl);
       colorsEl.textContent=`${giftcolors[i]}`;
       colorsEl.value=giftcolors[i];
+      colorsEl.style.color=giftcolors[i];
+
+      colorsEl.setAttribute('class','option');
     }
     selection.addEventListener('change', function(event){
       if (clicks > 0) {
@@ -152,6 +171,8 @@ function note (){
   const br1 = document.createElement('br');
   colorsID.appendChild(br1);
 
+  const hrEl = document.createElement('hr');
+  colorsID.appendChild(hrEl);
   const noteQues =document.createElement('h1');
   colorsID.appendChild(noteQues);
   noteQues.textContent='Would you like to add a card with the gift?';
@@ -160,6 +181,7 @@ function note (){
   colorsID.appendChild(yesNo);
   yesNo.textContent='YES';
   yesNo.addEventListener('click', function yesNoFun(){
+
     if (clicks >1)
     {
       yesID.innerHTML = '';
@@ -168,6 +190,7 @@ function note (){
 
     }
     noID.innerHTML = '';
+
     yesID.appendChild(noteEl);
     noteEl.textContent='Write your note here:';
 
@@ -179,9 +202,11 @@ function note (){
   });
 
   const noYes = document.createElement ('button');
+  noYes.setAttribute('id','changeNo');
   colorsID.appendChild(noYes);
   noYes.textContent='NO';
   noYes.addEventListener('click',function(){
+
     if (clicks >1)
     {
       noID.innerHTML = '';
@@ -206,6 +231,7 @@ function price (){
   priceID.appendChild(priceButton);
   priceButton.textContent='VIEW PRICE';
   priceButton.addEventListener('click', function(){
+
     itemPrice=Math.floor(Math.random() * (40 - 20 + 1)) + 20;
 
     // ***************local Storage :
@@ -226,9 +252,11 @@ function price (){
 
 const finalID = document.getElementById('final');
 function final (){
+  const hrEl = document.createElement('hr');
+  finalID.appendChild(hrEl);
   const ready = document.createElement('h1');
   finalID.appendChild(ready);
-  ready.textContent='Now Your gift is ready to be delivered!';
+  ready.textContent='Now your Gift is Ready to Be Delivered!';
   const br2 = document.createElement('br');
   finalID.appendChild(br2);
   const bagBottun = document.createElement('button');
@@ -238,6 +266,13 @@ function final (){
   function cartPage(){
     bagBottun.setAttribute('onclick','location.href=\'myCart.html\'');
   }
+  const br = document.createElement('br');
+  finalID.appendChild(br);
+  const myimages = document.createElement('img');
+  finalID.appendChild(myimages);
+  myimages.src= 'icons/shopping cart.gif';
+  myimages.width=150;
+
 }
 
 
@@ -254,11 +289,4 @@ function settingItem(){
 }
 
 
-// function gettingItem(){
-//   let product = localStorage.getItem('Gift');
-//   if(product) {
-//     localStorageArray = JSON.parse(product);
-
-//   }
-// } gettingItem();
-
+// ***************celebrating function:
