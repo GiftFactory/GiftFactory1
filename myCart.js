@@ -148,7 +148,7 @@ let totalHeader=document.createElement('th');
 totalHeader.textContent='TOTAL';
 footerRow.appendChild(totalHeader);
 let newCell=document.createElement('td');
-newCell.textContent= total;
+newCell.textContent=`${total} Jd` ;
 footerRow.appendChild(newCell);
 
 tableFooter.setAttribute('id','tfoot');
@@ -268,7 +268,7 @@ function updateTotal(){
   totalHeader.textContent='TOTAL';
   footerRow.appendChild(totalHeader);
   newCell=document.createElement('td');
-  newCell.textContent= total;
+  newCell.textContent= `${total} Jd`;
   footerRow.appendChild(newCell);
 }
 
