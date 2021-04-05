@@ -5,7 +5,6 @@ let clicks = 0;
 let chooseArray = [' flowers', 'chocolate', 'candeys',' cosmetics','Books',' Unusual gifts',];
 const giftcolors = ['black' , 'white' , 'blue','green','pink','purple','red','yellow'];
 
-
 // *************************getting the elements from HTML
 
 const startButoon =document.getElementById('start');
@@ -121,9 +120,10 @@ function next3(){
       const myimages = document.createElement('img');
       colorsID.appendChild(myimages);
       myimages.src= `./giftColors/${event.target.value}.png`;
-
+      myimages.title= `Random Gift With ${event.target.value} Box`;
       // ***************local Storage :
       localStorageArray[2]=(`./giftColors/${event.target.value}.png`);
+      localStorageArray[0]=`Random Gift With ${event.target.value} Box`;
 
       myimages.height = 300;
       myimages.width = 300;
@@ -245,7 +245,7 @@ function final (){
 
 let localStorageArray=['','','',''];
 
-localStorageArray[0]=('RandomItem');
+// localStorageArray[0]=('RandomItem');
 localStorageArray[1]=('1');
 settingItem();
 function settingItem(){
