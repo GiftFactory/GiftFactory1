@@ -73,17 +73,22 @@ fifthHeader.textContent='Preview';
 headerRow.appendChild(fifthHeader);
 
 let fourthHeader=document.createElement('th');
-fourthHeader.textContent='Total per Item';
+fourthHeader.textContent='Total Per Item';
 headerRow.appendChild(fourthHeader);
 
 
-// let sixthHeader=document.createElement('th');
-// sixthHeader.textContent='Delete Purchase';
-// headerRow.appendChild(sixthHeader);
+let sixthHeader=document.createElement('th');
+sixthHeader.textContent='Delete Purchase';
+headerRow.appendChild(sixthHeader);
 
+let horizontalRuler=document.createElement('hr');
+table.appendChild(horizontalRuler);
 
 let tableBody=document.createElement('tbody');
 table.appendChild(tableBody);
+
+
+
 
 for (let i=0; i<Item.array.length;i++){
   let newRow= document.createElement('tr');
@@ -95,12 +100,13 @@ for (let i=0; i<Item.array.length;i++){
   newRow.appendChild(newCell);
 
 
-  newCell= document.createElement('input');
+  newCell= document.createElement('td');
   newCell.setAttribute('type', 'number');
-  newCell.setAttribute('value',Item.array[i].quantity);
-  newCell.setAttribute('min',1);
+  // newCell.setAttribute('value',Item.array[i].quantity);
+  // newCell.setAttribute('min',1);
   newCell.setAttribute('id','id'+[i]);
   // newCell.setAttribute('class','input');
+  newCell.textContent=`${Item.array[i].quantity}`;
   newCell.nodeValue=parseInt(`${Item.array[i].quantity}`);
   newRow.appendChild(newCell);
 
@@ -115,14 +121,21 @@ for (let i=0; i<Item.array.length;i++){
   newCell1.setAttribute('id','multi'+[i+1]);
   newRow.appendChild(newCell1);
 
-  // let deleteRow= document.createElement('button');
-  // deleteRow.textContent='Remove';
-  // deleteRow.setAttribute('id','remove'+[i+1]);
-  // newRow.appendChild(deleteRow);
+  let deleteRow= document.createElement('button');
+  deleteRow.textContent='Remove Item';
+  deleteRow.setAttribute('id','remove'+[i+1]);
+  newRow.appendChild(deleteRow);
+
+
 
   tableBody.appendChild(newRow);
+
+  let horizontalRuler=document.createElement('hr');
+  tableBody.appendChild(horizontalRuler);
+
   newRow.setAttribute('id','row'+[i+1]);
   total=total+Item.array[i].multiPrice;
+
 
 }
 
@@ -137,14 +150,18 @@ footerRow.appendChild(totalHeader);
 let newCell=document.createElement('td');
 newCell.textContent= total;
 footerRow.appendChild(newCell);
+
+tableFooter.setAttribute('id','tfoot');
 //  remove an item from table
-// for(let i=0;i<Item.array.length;i++){
-//   document.getElementById('remove'+[i+1]).addEventListener('click', handle);
-// }
+for(let i=0;i<Item.array.length;i++){
+  document.getElementById('remove'+[i+1]).addEventListener('click', handle);
+}
 // event listnere for quantity change
 for(let i=0;i<Item.array.length;i++){
   document.getElementById('id'+[i]).addEventListener('change', changeQ);
 }
+
+
 
 
 function changeQ(event){
@@ -220,23 +237,23 @@ cartUpdate();
 
 
 
-// function handle(event){
-//   event.preventDefault();
-//   let imgClicked=event.target.parentElement.firstChild.textContent;
+function handle(event){
+  event.preventDefault();
+  let imgClicked=event.target.parentElement.firstChild.textContent;
 
-//   console.log(imgClicked,event.target);
-//   let Index= Item.array.findIndex(function(todo,index){
-//     return todo.itemName===imgClicked;});
+  console.log(imgClicked,event.target);
+  let Index= Item.array.findIndex(function(todo,index){
+    return todo.itemName===imgClicked;});
 
-//   console.log(Index);
-//   table.deleteRow(Index+1);
-//   Item.array.splice(Index,1);
-//   // console.log(Item.array);
-//   updateTotal();
-//   cartUpdate();
-//   console.log();
+  console.log(Index);
+  table.deleteRow(Index+1);
+  Item.array.splice(Index,1);
+  // console.log(Item.array);
+  updateTotal();
+  cartUpdate();
+  console.log();
 
-// }
+}
 
 // // update total
 function updateTotal(){

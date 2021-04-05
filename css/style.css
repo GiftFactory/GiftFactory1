@@ -283,9 +283,9 @@ body{
 }
 h2{
   font-family: 'Open Sans Condensed', sans-serif;
-  background-color: #eabf9f;
+  /* background-color: #eabf9f; */
   font-size: 200%;
-  height: 10%;
+ height: 10%;
 }
 
 /* slider  */
@@ -365,4 +365,5 @@ input[name='r']{
   
 
 }
+
 

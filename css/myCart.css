@@ -71,29 +71,62 @@ header {
  
  
   td,tr,th{
-   border:solid black 2px;
+   /* border:solid black 2px; */
    width:100px;
    height:25px;
 
  }
  
- input{
-   width:75px;
+
+ tr{
+   margin-top: 20px;
  }
+ /* input{
+   width:75px;
+ } */
  
  img{
-   height:200%;
-   width:90%;
+   display: block;
+   width:50px;
+   height:50px;
+  text-align: center;
+  position: relative;
+  left: 35px;
+
+   /* margin-right: 250px; */
+
+  
   
  }
- 
+ hr{
+   
+      width: 600%;
+       display: block;
+      unicode-bidi: isolate;
+      margin-block-start: 0.5em;
+      margin-block-end: 0.5em;
+      margin-inline-start: auto;
+      margin-inline-end: auto;
+      overflow: hidden;
+      border-style: inset;
+      border-width: 1px;
+      margin-left:25%;
+  }
+
  table{
+   padding:10px;
    text-align: center;
    border: solid;
    margin-left: 165px;
    width:75%;
    
  }
+
+
+ /* #tfoot{
+  position: relative;
+  margin-left: 750px;
+ } */
 
  #cartTable
  {
@@ -107,13 +140,17 @@ header {
  }
  
  button{
-   height:45%;
-   background-color: brown;
-   border-radius: 5px;
+   height:30px;
+   background-color: lightpink;
+   border-radius: 2px;
    margin-top: 20px;
  }
  
- 
+ button:hover{
+  background-color:purple;
+  
+
+ }
  
  /* footer */
  /* footer{
@@ -128,4 +165,35 @@ header {
 
 
 
-  
+  #logoName{
+    font-family: 'Sacramento', cursive;
+    font-size: 100%;
+    color: #FFFFFF;
+    /*position: relative;*/
+    /* left: 10%; */
+    /* margin-right: 30%; */
+  }
+  #logo{
+    font-family: 'Sacramento', cursive;
+    font-size: 190%;
+    color: #FFFFFF;
+    display:inline-flex;
+    align-items: center;
+    position: absolute;
+    width: 260px;
+    padding: 1px;
+  }
+  #logo img{
+    width: 92px;
+    margin: -17px;
+    margin-top: -2%;
+  }
+  #logo p{
+    margin: 8px;
+    margin-top: 23%;
+    font-size: 105%;
+  }
+  h2 {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 200%;
+}
