@@ -71,28 +71,61 @@ header {
  
  
   td,tr,th{
-   border:solid black 2px;
+   /* border:solid black 2px; */
    width:100px;
    height:25px;
 
  }
  
- input{
-   width:75px;
+
+ tr{
+   margin-top: 20px;
  }
+ /* input{
+   width:75px;
+ } */
  
  img{
-   height:200%;
-   width:90%;
+   display: block;
+   width:50px;
+   height:50px;
+  text-align: center;
+  position: relative;
+  left: 35px;
+
+   /* margin-right: 250px; */
+
+  
   
  }
- 
+ hr{
+   
+      width: 600%;
+       display: block;
+      unicode-bidi: isolate;
+      margin-block-start: 0.5em;
+      margin-block-end: 0.5em;
+      margin-inline-start: auto;
+      margin-inline-end: auto;
+      overflow: hidden;
+      border-style: inset;
+      border-width: 1px;
+      margin-left:25%;
+  }
+
  table{
+   padding:10px;
    text-align: center;
    border: solid;
    margin-left: 165px;
    width:75%;
    
+ }
+
+
+ #tfoot{
+  position: relative;
+  margin-left: 750px;
  }
 
  #cartTable
@@ -107,13 +140,17 @@ header {
  }
  
  button{
-   height:45%;
-   background-color: brown;
-   border-radius: 5px;
+   height:30px;
+   background-color: lightpink;
+   border-radius: 2px;
    margin-top: 20px;
  }
  
- 
+ button:hover{
+  background-color:purple;
+  
+
+ }
  
  /* footer */
  /* footer{
