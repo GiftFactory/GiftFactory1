@@ -4,12 +4,12 @@ let total=0;
 let cartNum=0;
 // 1. create a constructor function //
 
-function Item(itemName,quantity) {
+function Item(itemName,quantity,itemPrice,path) {
   this.itemName= itemName;
   this.quantity=quantity;
-  this.itemPrice= getRandomIntInclusive(10,20);
+  this.itemPrice=itemPrice ;
   this.multiPrice= multiply(this.itemPrice,this.quantity);
-  this.path=`images/${itemName}.jpg`;
+  this.path=path;
   Item.array.push(this);
 
 }
@@ -18,18 +18,24 @@ function Item(itemName,quantity) {
 Item.array=[];
 console.log(Item.array);
 
-let firstP=new Item ('rose1',3);
-let secondP=new Item ('rose2',6);
-let thirdP=new Item ('rose3',3);
-let fourthP=new Item ('chocolatePlate',5);
+function getData(x){
+  let customizedProduct=JSON.parse(localStorage.getItem(x));
+  // console.log(customizedProduct);
+  for (let i=0; i<customizedProduct.length;i++){
+    let newInst= new Item(customizedProduct[i].giftName,customizedProduct[i].giftQty,customizedProduct[i].giftPrice,customizedProduct[i].giftpath,customizedProduct[i].id);
+  }
 
-
-
-function getRandomIntInclusive(min, max) {
-  min = Math.ceil(min);
-  max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min + 1) + min);
 }
+getData('gift2cart');
+
+// function randomData(){
+//   let customizedProduct=JSON.parse(localStorage.getItem('Gift'));
+//   console.log(customizedProduct);
+//   let newInst= new Item(customizedProduct[0],1,customizedProduct[3],customizedProduct[2]);
+// }
+// randomData();
+
+
 
 function multiply(price,number){
   return price*number;
@@ -71,9 +77,9 @@ fourthHeader.textContent='Total per Item';
 headerRow.appendChild(fourthHeader);
 
 
-let sixthHeader=document.createElement('th');
-sixthHeader.textContent='Delete Purchase';
-headerRow.appendChild(sixthHeader);
+// let sixthHeader=document.createElement('th');
+// sixthHeader.textContent='Delete Purchase';
+// headerRow.appendChild(sixthHeader);
 
 
 let tableBody=document.createElement('tbody');
@@ -109,10 +115,10 @@ for (let i=0; i<Item.array.length;i++){
   newCell1.setAttribute('id','multi'+[i+1]);
   newRow.appendChild(newCell1);
 
-  let deleteRow= document.createElement('button');
-  deleteRow.textContent='Remove';
-  deleteRow.setAttribute('id','remove'+[i+1]);
-  newRow.appendChild(deleteRow);
+  // let deleteRow= document.createElement('button');
+  // deleteRow.textContent='Remove';
+  // deleteRow.setAttribute('id','remove'+[i+1]);
+  // newRow.appendChild(deleteRow);
 
   tableBody.appendChild(newRow);
   newRow.setAttribute('id','row'+[i+1]);
@@ -132,9 +138,9 @@ let newCell=document.createElement('td');
 newCell.textContent= total;
 footerRow.appendChild(newCell);
 //  remove an item from table
-for(let i=0;i<Item.array.length;i++){
-  document.getElementById('remove'+[i+1]).addEventListener('click', handle);
-}
+// for(let i=0;i<Item.array.length;i++){
+//   document.getElementById('remove'+[i+1]).addEventListener('click', handle);
+// }
 // event listnere for quantity change
 for(let i=0;i<Item.array.length;i++){
   document.getElementById('id'+[i]).addEventListener('change', changeQ);
@@ -199,35 +205,38 @@ function cartUpdate(){
       cartNum++;
 
     }
+    else{
+      cartNum--;
 
-  }
 
-  cartNumber.textContent=`(${cartNum})`;
-  cartCount.appendChild(cartNumber);
+    }
 
-}
+    cartNumber.textContent=`(${cartNum})`;
+    cartCount.appendChild(cartNumber);
+
+  }}
 cartUpdate();
 
 
 
 
-function handle(event){
-  event.preventDefault();
-  let imgClicked=event.target.parentElement.firstChild.textContent;
+// function handle(event){
+//   event.preventDefault();
+//   let imgClicked=event.target.parentElement.firstChild.textContent;
 
-  console.log(imgClicked,event.target);
-  let Index= Item.array.findIndex(function(todo,index){
-    return todo.itemName===imgClicked;});
+//   console.log(imgClicked,event.target);
+//   let Index= Item.array.findIndex(function(todo,index){
+//     return todo.itemName===imgClicked;});
 
-  console.log(Index);
-  table.deleteRow(Index+1);
-  Item.array.splice(Index,1);
-  // console.log(Item.array);
-  updateTotal();
-  cartUpdate();
-  console.log();
+//   console.log(Index);
+//   table.deleteRow(Index+1);
+//   Item.array.splice(Index,1);
+//   // console.log(Item.array);
+//   updateTotal();
+//   cartUpdate();
+//   console.log();
 
-}
+// }
 
 // // update total
 function updateTotal(){
@@ -246,3 +255,15 @@ function updateTotal(){
   footerRow.appendChild(newCell);
 }
 
+// let firstP=new Item ('rose1',3);
+// let secondP=new Item ('rose2',6);
+// let thirdP=new Item ('rose3',3);
+// let fourthP=new Item ('chocolatePlate',5);
+
+
+
+// function getRandomIntInclusive(min, max) {
+//   min = Math.ceil(min);
+//   max = Math.floor(max);
+//   return Math.floor(Math.random() * (max - min + 1) + min);
+// }
