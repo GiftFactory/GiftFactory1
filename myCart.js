@@ -31,10 +31,12 @@ function getData(x){
 getData('gift2cart');
 
 function randomData(){
+
   let customizedProduct=JSON.parse(localStorage.getItem('Gift'));
-  console.log(customizedProduct);
-  let newInst= new Item(customizedProduct[0],1,customizedProduct[3],customizedProduct[2]);
-  console.log(newInst);
+  if (customizedProduct !== null){
+    console.log(customizedProduct);
+    let newInst= new Item(customizedProduct[0],1,customizedProduct[3],customizedProduct[2]);
+    console.log(newInst);}
 }
 randomData();
 
