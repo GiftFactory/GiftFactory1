@@ -21,19 +21,22 @@ console.log(Item.array);
 function getData(x){
   let customizedProduct=JSON.parse(localStorage.getItem(x));
   // console.log(customizedProduct);
-  for (let i=0; i<customizedProduct.length;i++){
-    let newInst= new Item(customizedProduct[i].giftName,customizedProduct[i].giftQty,customizedProduct[i].giftPrice,customizedProduct[i].giftpath,customizedProduct[i].id);
+  if (customizedProduct !== null){
+    for (let i=0; i<customizedProduct.length;i++){
+      let newInst= new Item(customizedProduct[i].giftName,customizedProduct[i].giftQty,customizedProduct[i].giftPrice,customizedProduct[i].giftpath,customizedProduct[i].id);
+    }
   }
 
 }
 getData('gift2cart');
 
-// function randomData(){
-//   let customizedProduct=JSON.parse(localStorage.getItem('Gift'));
-//   console.log(customizedProduct);
-//   let newInst= new Item(customizedProduct[0],1,customizedProduct[3],customizedProduct[2]);
-// }
-// randomData();
+function randomData(){
+  let customizedProduct=JSON.parse(localStorage.getItem('Gift'));
+  console.log(customizedProduct);
+  let newInst= new Item(customizedProduct[0],1,customizedProduct[3],customizedProduct[2]);
+  console.log(newInst);
+}
+randomData();
 
 
 
@@ -251,9 +254,9 @@ function handle(event){
   // console.log(Item.array);
   updateTotal();
   cartUpdate();
-  console.log();
 
 }
+console.log(Item.array);
 
 // // update total
 function updateTotal(){
@@ -296,7 +299,7 @@ function cartUpdate(){
     }
 
 
-  for (let i=1;i<=Item.array.length;i++){
+  for (let i=1;i<Item.array.length;i++){
     if (document.getElementById('remove'+[i+1]).clicked === true)
 
     {
