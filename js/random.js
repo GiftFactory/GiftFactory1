@@ -2,7 +2,7 @@
 
 let itemPrice=0;
 let clicks = 0;
-let chooseArray = [' flowers', 'chocolate', 'candeys',' cosmetics','Books',' Unusual gifts',];
+let chooseArray = ['flowers', 'chocolate', 'candeys','cosmetics','Books','Unusual gifts',];
 const giftcolors = ['black' , 'white' , 'blue','green','fuchsia','purple','red','yellow'];
 
 // *************************getting the elements from HTML
@@ -86,13 +86,21 @@ function next2 (){
     const form = document.createElement('form');
     likesSecion.appendChild(form);
     for (let i=0; i<chooseArray.length; i++){
+      const icon = document.createElement('img');
+      form.appendChild(icon);
+      icon.src= `./icons/${chooseArray[i]}.png`;
+      icon.width=30;
+      icon.setAttribute('id','icon');
       const label1 = document.createElement('label');
       form.appendChild(label1);
       label1.textContent= chooseArray[i];
+      label1.setAttribute('id','labels');
+
+      label1.style.fontSize='large';
       const input1 = document.createElement('input');
       input1.type='checkbox';
       label1.appendChild(input1);
-
+      input1.setAttribute('id','input');
       const br = document.createElement('br');
       label1.appendChild(br);
       const br2 = document.createElement('br');
@@ -116,17 +124,18 @@ function next3(){
     choosecolorSecion.appendChild(h1El);
     h1El.textContent='Now choose the color of your box gift';
 
-
     const selection = document.createElement('select');
     choosecolorSecion.appendChild(selection);
     for (let i=0; i<giftcolors.length; i++){
       const colorsEl = document.createElement('option');
       selection.appendChild(colorsEl);
       colorsEl.textContent=`${giftcolors[i]}`;
+      colorsEl.style.fontSize='20px';
+      colorsEl.setAttribute('id','TEST');
+
       colorsEl.value=giftcolors[i];
       colorsEl.style.color=giftcolors[i];
-
-      colorsEl.setAttribute('class','option');
+      // colorsEl.style.background=giftcolors[i];
     }
     selection.addEventListener('change', function(event){
       if (clicks > 0) {

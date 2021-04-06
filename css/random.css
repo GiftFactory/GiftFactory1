@@ -6,6 +6,7 @@ main {
 h1{
     font-size: 160%;
     margin-top: 10px;
+    font-family: 'Gabriela', serif;
 
 }
 
@@ -46,6 +47,7 @@ input{
     background-color: rgb(234,191,159,0.7);
     color: 1e212d;
 
+
 }
 #age input{
     width: 75%;
@@ -63,6 +65,7 @@ input{
 #choosecolor select{
     width: 25%;
     height: 25px;
+
 }
 
 #yes input{
@@ -84,11 +87,13 @@ button{
     width: 75%;
     height: 50px;
     text-align: center;
-    font-size: 16px;
-    font-family: sans-serif;
+    font-size: 20px;
+    font-family: 'Gabriela', serif;
     font-weight: 700;
     background-color: rgb(234,191,159,0.7);
     box-shadow: 0 1px 0 1px rgba(0,0,0,.04); 
+    font-family: 'Gabriela', serif;
+    font-weight: 500;
 }
 
 #final h1{
@@ -103,3 +108,52 @@ button{
     color: rgb(139, 46, 46);
     font-weight: bold;
 }
+
+
+option{
+    font-family: 'Gabriela', serif;
+    font-weight: 500;
+   /* background-image: u
+   rl(giftColors/blue.png);
+    background-size: 5px; */
+}
+
+
+.input-container {
+    display: flex;
+  }
+  
+  .icon {
+    padding: 10px;
+    width: 50px;
+  }
+  
+  .input-field {
+    padding: 10px;
+  }
+
+  #icon{
+    margin: 0px 5px 5px 0px;
+    /* border: 1px solid;
+    color: black; */
+    padding: 5px 3px 5px 3px;
+} 
+
+#labels{
+    /* padding: 5px 3px 5px 3px; */
+    /* margin: 0px 2px 0px 0px; */
+    width: 30px;
+    font-family: 'Gabriela', serif;
+    font-size: 40px;
+}
+
+/* #input{
+width: 5%;
+padding: 5px 3px 5px 3px; */
+
+
+
+ /* #icons{
+    margin-bottom: 30px;
+} */
+
