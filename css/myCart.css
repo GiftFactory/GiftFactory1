@@ -70,10 +70,9 @@
  {
    height:100%;
    width:95%;
-   /* text-align:center; */
-   /* border: black solid ; */
    padding-top: 20px;
    margin-top: 25px;
+  
 
 
  }
@@ -107,6 +106,8 @@ h3{
  }
  
 
+ 
+
  footer{
   clear: both;
   color: #FFFFFF;
@@ -132,13 +133,12 @@ h3{
   background-color: black;
   color: white;
   padding: 5px 10px;
-
   border: none;
   cursor: pointer;
   opacity: 1;
-  position: fixed;
-  bottom: 90px;
-  right: 0px;
+  position: relative;
+  bottom: 0px;
+  left:425px;
   width: 180px;
   border-radius: 3px;
 }
@@ -148,48 +148,59 @@ h3{
   display: none;
   position: fixed;
   bottom: 0;
-  left:450px;
+  left:495px;
   /* border:  solid #0a0a0a; */
   z-index: 9999999;
 }
 
 /* Add styles to the form container */
 .form-container {
-  max-width: 50%;
-  max-height: 100%;
-  padding: 15px;
+  max-width: 465px;
+ height: 470px;
+  padding:15px;
+  /* background-color: #faf3e0; */
   background-color: white;
-  padding-left: 35px;
   border: solid #ad1010b9 5px;
-  padding-top: 5px;
-  padding-bottom: 5px;
+   text-align: left;
+   margin-right:150px;
 }
 
 /* Full-width input fields */
 .form-container input[type=text], .form-container input[type=password] {
-  width: 80%;
-  padding: 15px;
-  margin: 10px 0 10px 0;
+  width:395px;
+  padding: 10px;
+  /* margin: 10px 0 10px 0; */
   border: none;
   background: #f1f1f1;
 }
 
 /* When the inputs get focus, do something */
 .form-container input[type=text]:focus, .form-container input[type=password]:focus {
-  background-color: #ddd;
+  background-color: #ad1010b9;
   outline: none;
 }
 
-/* Set a style for the submit/login button */
+/* //Set a style for the submit/login button */
 .form-container .btn {
-  background-color: #4CAF50;
+   /* background-color: #4CAF50;  */
+   background-color: black;
   color: white;
-  padding: 8px 20px 16px 20px;
+  padding: 2px 5px 2px 5px;
   border: none;
   cursor: pointer;
-  width: 50%;
+  width: 40%;
   margin-bottom:10px;
-  opacity: 0.7;
+  opacity: 1;
+  display: inline;
+  position: relative;
+  bottom:50px;
+  
+}  
+
+#red{
+position: relative;
+left:230px;
+bottom:110px;
 }
 
 /* Add a red background color to the cancel button */
@@ -199,18 +210,80 @@ h3{
 
 /* Add some hover effects to buttons */
 .form-container .btn:hover, .open-button:hover {
-  opacity: 1;
+  opacity: .8;
 }
+
+
+
+
+#myForm p{
+ position: relative;
+ margin-left: 5px;
+ text-indent: none;
+ margin-top: 0px;
+ 
+}
+
+
+/* .check p{
+  position: relative;
+  left:40px;
+  bottom:25px;
+  padding-top: 0;
+} */
 
 .method{
-  display: inline;
+  margin:0 0 0 0;
+
+}
+
+#VISA{
+  position: relative;
+  left:30px;
+  top:0px;
+
 }
 
 
+#MaterCard{
+  position: relative;
+  bottom:45px;
+  left:210px;
+  margin-bottom: 0px;
+}
 
+#firstM{
+  position: relative;
+  bottom: 20px;
+  left:45px;
+  margin-bottom: 0px;
+}
 
-
+#secondM{
+  position: relative;
+  bottom: 65px;
+  left:225px;
+  margin-bottom: 0px;
+}
  
+
+input{
+  position: relative;
+  bottom:70px;
+}
+#input1{
+  position: relative;
+  top:0px;
+}
+#iban{
+  position: relative;
+  bottom:70px;
+}
+
+#pin{
+  position: relative;
+  bottom:70px;
+}
 #logoName{
   font-family: 'Sacramento', cursive;
   font-size: 100%;
@@ -247,13 +320,34 @@ h3{
 
 #cart{
   position: relative;
-right:25px;
+  right:25px;
 } 
 
 #cartName{
   position: relative;
-top:15px;
-font-size: 27.2px;}
+  top:15px;
+  font-size: 27.2px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* 
