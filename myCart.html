@@ -59,32 +59,24 @@
 
 <div class="form-popup" id="myForm">
   <form action="index.html" class="form-container">
-    <h1>Confirm Your Purchase:</h1>
+    <h1>Customer Details</h1>
     <hr>
+    <label for="Name" id="name"><p><b>Name</b></p></label>
+    <input  id="input1" type="text" placeholder="Enter Full Name" name="name" required>
     <br>
-    <label for="Name"><b>Name</b></label>
-    <input type="text" placeholder="Enter Full Name" name="name" required>
-    <br><br>
-    <p> <b>Choose your payment method:</b> </p>
+    <br>
+    <p> <b>Payment Method</b> </p>
     <input type="checkbox"  class="method" id="VISA" name="VISA" value="VISA" >
-    <label for="VISA"> VISA </label><br>
+    <label for="VISA" class="check" id="firstM"><p>  VISA </p> </label>
     <input type="checkbox" class="method" id="MaterCard" name="MaterCard" value="MaterCard">
- 
-    <label for="MaterCard"> MaterCard</label><br>
-    <br>
-    <br>
-   <label for=""><b>IBAN</b></label>
+    <label for="MaterCard" class="check" id="secondM"><p> MaterCard </p></label>
+    <label for=""><p id="iban"><b>IBAN</b></p></label>
     <input type="text" placeholder="Enter IBAN" name="IBAN" required>
-    
-    <br><br><br>
-    
-    
- 
-    <label for=""><b>PIN CODE</b></label>
+    <br>
+    <label for=""><p id="pin"><b>PIN Code</b></p></label>
     <input type="password" placeholder="Enter Password" name="psw" required>
 
-    <button type="submit" class="btn">Confirm Purchase</button>
-    <button type="button" class="btn cancel" onclick="closeForm()">Cancel Purchase </button>
+    <button type="submit" class="btn" id="black">Confirm Purchase</button><button type="button" class="btn cancel" onclick="closeForm()" id="red">Cancel Purchase </button>
   </form>
 </div>
 
