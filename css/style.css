@@ -1,3 +1,6 @@
+body{
+  position: relative;
+}
 body *{
   /* border: solid 2px blue; */
   margin: -1px 48px 10px 20px;

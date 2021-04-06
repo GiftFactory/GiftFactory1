@@ -1,4 +1,25 @@
 'use strict';
+
+function fistDisplay (){
+  let btnCateg=document.getElementById('giftItems1');
+  btnCateg.style.display='inline-flex';
+  let QtyInCart=0;
+  storedItems =JSON.parse(localStorage.getItem('gift2cart'));
+  let storedRandItem=localStorage.getItem('Gift');
+  console.log(storedItems);
+  if(storedItems!==null){
+    QtyInCart=+storedItems.length;
+  }
+  if(storedRandItem!==null){
+    QtyInCart=+storedItems.length;
+  }
+  let cartNameEl =document.getElementById('cartName');
+  cartNameEl.textContent =`Cart (${QtyInCart})`;
+}
+let storedItems;
+
+fistDisplay ();
+
 let cartNameEl =document.getElementById('cartName');
 let cateElX=document.getElementsByClassName('cate');
 for(let i=0;i<cateElX.length;i++){
@@ -36,10 +57,9 @@ for(let i=0;i<btnAdd2Cart.length;i++){
   btnAdd2Cart[i].addEventListener('submit',btn);}
 function btn (event){
   event.preventDefault();
-  // debugger;
   let giftName = event.target.children[0].alt;
   let giftpath = event.target.children[0].src;
-  let giftPrice =event.target.children[1].textContent;
+  let giftPrice =parseFloat(event.target.children[1].textContent);
   let giftQty = event.target.children[2].value;
   let btnAdd = event.target.children[3].value;
   let added=0;
@@ -47,7 +67,7 @@ function btn (event){
     if(Gifts.all.length>0){
       for(let i=0;i<Gifts.all.length;i++){
         if(Gifts.all[i].giftName===giftName){
-          Gifts.all[i].giftQty=parseInt(Gifts.all[i].giftQty,10)+ parseInt(giftQty,10);
+          Gifts.all[i].giftQty=parseFloat(Gifts.all[i].giftQty)+ parseFloat(giftQty);
           added=1;
           break;}
       }
@@ -83,5 +103,12 @@ const Gifts = function(giftName,giftpath,giftPrice,giftQty){
 Gifts.all=[];
 
 
-//////////////////////////////
-
+////////////////Load Old Orders //////////////
+for (let i=0;i<storedItems.length;i++){
+  let oldOrder = new Gifts;
+  oldOrder.giftName=storedItems[i].giftName;
+  oldOrder.giftPrice=storedItems[i].giftPrice;
+  oldOrder.giftQty=storedItems[i].giftQty;
+  oldOrder.giftpath=storedItems[i].giftpath;
+  oldOrder.id=storedItems[i].id;
+}
