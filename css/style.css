@@ -39,7 +39,7 @@ header {
     width: 70%;
     margin: 49px auto auto 23%;
     font-size: 25px;
-    font-family: 'Open Sans Condensed', sans-serif;
+    font-family:Arial, Helvetica, sans-serif;
   }
   #cartQtyIcon{
   }
@@ -80,13 +80,13 @@ header {
     color: #FFFFFF;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-align: center;
-    padding-top: 7px;
-    padding-bottom: 1px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     background-color:#000000;
-    margin-top: 584px;
+    margin-top: 512px;
     width: 100%;
     margin-left: 0%;
-    /* margin-bottom: 20%; */
+    margin-bottom: -1%;
     /* width: 100%; */
 }
 /* new css */
@@ -149,8 +149,8 @@ align-items: center;
   padding: 1px;
 }
 #cart img{
-  width: 40px;
-    height: 45px;
+  width: 50px;
+    height: 55px;
   margin-top: 10%;
   /* margin-left: 10%; */
 }
@@ -159,7 +159,7 @@ align-items: center;
   font-size: 170%;
   color: #FFFFFF;
   /* font-weight: bold; */
-  /* padding-top: 10%; */
+  padding-top: 30%;
 }
 #cart a {
   display: flex;
@@ -168,8 +168,8 @@ align-items: center;
   align-items: center;
 }
 #cart a *{
-  margin: 0px;
-  padding:0px;
+  margin: -4px;
+  /* padding:0px; */
 }
 /* main section img{
   width: 25%; 
@@ -184,13 +184,13 @@ align-items: center;
   clear: both;
   position:relative;
   left: -4%;
-  max-width: 116%;
+  max-width: 125%;
   height: auto;
 }
 #secondPlace {
   position: absolute;
-  right:-13%;
-  max-width: 116%;
+  right:-19%;
+  max-width: 125%;
   height: auto;
   top: 0%;
   padding-top: 0%;
@@ -202,6 +202,9 @@ align-items: center;
    background-size: 100%;
    background-image: url(../images/slide1.jpg);
    background-position: center;
+   width: 74%;
+   margin-left: -2%;
+   margin-top: 2%;
  }
 #secPopular {
   /* padding-top: 6%; */
@@ -247,16 +250,16 @@ body{
   font-size: 34px;
   background-color: #0000005e;
   color: white;
-  width: 116%;
+  width: 125%;
   text-align: center;
   height:97%;
   /* right:-10; */
   left:-4%;
 }
    p.p1 {
-  margin-top: 150px;
-  font-family: 'Open Sans Condensed', sans-serif;
-
+  margin-top: 160px;
+  font-family: 'Dancing Script', cursive;  
+  font-size: 50px;
   }
   .con1 {
     width: 500px;
@@ -271,42 +274,51 @@ body{
       font-size: 34px;
       background-color: #0000005e;
       color: white;
-      width: 116%;
+      width: 125%;
       text-align: center;
       height: 97%;
-      left: -17%;
+      left: -20%;
   }
   p.p2 {
-    margin-top: 150px;
-    font-family: 'Open Sans Condensed', sans-serif;
-
+    margin-top: 160px;
+    font-family: 'Dancing Script', cursive;
+    font-size: 50px;
     }
   #brief{
     font-family: 'Open Sans Condensed', sans-serif;
     font-size: 40px;
     background: #faf3e07a;
+    text-align: center;
 }
 #brief2{
-  font-family: 'Open Sans Condensed', sans-serif;
-  font-size: 40px;
+  font-family: 'Dancing Script', cursive;;
+  font-size: 60px;
   background: #faf3e07a;
+  color: red;
+  text-align: center;
+
 }
 #brief3{
   font-family: 'Open Sans Condensed', sans-serif;
-  font-size: 40px;
+  font-size: 35px;
   background: #faf3e07a;
+  text-align: center;
+
 }
 #brief4{
   font-family: 'Open Sans Condensed', sans-serif;
   font-size: 30px;
   background: #faf3e07a;
+  text-align: center;
+
 }
 
 h2{
-  font-family: 'Open Sans Condensed', sans-serif;
-  /* background-color: #eabf9f; */
+  font-family: 'Dancing Script', cursive;  /* background-color: #eabf9f; */
   font-size: 200%;
  height: 10%;
+ margin-top: -1%;
+ margin-bottom: -3%;
 }
 
 /* slider  */
@@ -404,7 +416,11 @@ input[name='r']{
 .dropdown {
   float: left;
   overflow: hidden;
+  margin-left: 4%;
+  margin-right: 0%;
+  
 }
+
 
 .dropdown .dropbtn {
   font-size: 26px;  
@@ -415,10 +431,17 @@ input[name='r']{
   background-color: inherit;
   font-family: inherit;
   margin: 0;
+  
 }
 
 .navbar a:hover, .dropdown:hover .dropbtn {
   background-color: rgb(61, 54, 54);
+  display: inline-flex;
+  text-align: center;
+  justify-content: space-between;
+  /* width: 240px; */
+  /* padding-right: 0%; */
+  /* margin-right: 0%; */
 }
 
 .dropdown-content {
@@ -437,12 +460,21 @@ input[name='r']{
   text-decoration: none;
   display: block;
   text-align: left;
+  margin: 0px;
+  width: 128px;
 }
 
 .dropdown-content a:hover {
   background-color: #ddd;
+   display: inline-flex;
+    text-align: center;
+    justify-content: space-between;
 }
 
 .dropdown:hover .dropdown-content {
   display: block;
+}
+.pp{
+text-align: center;
+width: 150px;
 }
