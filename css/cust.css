@@ -230,16 +230,20 @@ box-shadow: 3px 3px 5px rgba(128, 128, 128, 0.726);
     }
 
 
-   /* footer p{
+   footer p{
         position: relative;
-        left:22.5px;
+        left:2.5px;
       }
+
       footer{
-        /* margin-bottom: -10px; */
-        /* width:1358px; */
-        /* margin-right: -20px;
-        margin-left: -10px; */
-        /* margin-top:10px; */
-        /* padding-top:20px; */
+        margin-bottom: -10px;
+        width:1358px;
+        margin-right: -10px;
+        margin-left: -10px;
+        margin-top:10px;
+        padding-top:20px;
+        position: relative;
+        top:160px;
+        left:10px;
       
-      /* }   */
+       }  
