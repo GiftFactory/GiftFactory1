@@ -289,4 +289,34 @@ function settingItem(){
 }
 
 
+
 // ***************celebrating function:
+=======
+// function gettingItem(){
+//   let product = localStorage.getItem('Gift');
+//   if(product) {
+//     localStorageArray = JSON.parse(product);
+
+//   }
+// } gettingItem();
+
+//////////Load the old quantity in the cart//////
+
+function fistDisplay (){
+  let QtyInCart=0;
+  storedItems =JSON.parse(localStorage.getItem('gift2cart'));
+  let storedRandItem=localStorage.getItem('Gift');
+  console.log(storedItems);
+  if(storedItems!==null){
+    QtyInCart=+storedItems.length;
+  }
+  if(storedRandItem!==null){
+    QtyInCart=+storedItems.length;
+  }
+  let cartNameEl =document.getElementById('cartName');
+  cartNameEl.textContent =`Cart (${QtyInCart})`;
+}
+let storedItems;
+
+fistDisplay ();
+

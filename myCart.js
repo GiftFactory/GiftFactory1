@@ -73,17 +73,22 @@ fifthHeader.textContent='Preview';
 headerRow.appendChild(fifthHeader);
 
 let fourthHeader=document.createElement('th');
-fourthHeader.textContent='Total per Item';
+fourthHeader.textContent='Total Per Item';
 headerRow.appendChild(fourthHeader);
 
 
-// let sixthHeader=document.createElement('th');
-// sixthHeader.textContent='Delete Purchase';
-// headerRow.appendChild(sixthHeader);
+let sixthHeader=document.createElement('th');
+sixthHeader.textContent='Delete Purchase';
+headerRow.appendChild(sixthHeader);
 
+let horizontalRuler=document.createElement('hr');
+table.appendChild(horizontalRuler);
 
 let tableBody=document.createElement('tbody');
 table.appendChild(tableBody);
+
+
+
 
 for (let i=0; i<Item.array.length;i++){
   let newRow= document.createElement('tr');
@@ -95,12 +100,13 @@ for (let i=0; i<Item.array.length;i++){
   newRow.appendChild(newCell);
 
 
-  newCell= document.createElement('input');
+  newCell= document.createElement('td');
   newCell.setAttribute('type', 'number');
-  newCell.setAttribute('value',Item.array[i].quantity);
-  newCell.setAttribute('min',1);
+  // newCell.setAttribute('value',Item.array[i].quantity);
+  // newCell.setAttribute('min',1);
   newCell.setAttribute('id','id'+[i]);
   // newCell.setAttribute('class','input');
+  newCell.textContent=`${Item.array[i].quantity}`;
   newCell.nodeValue=parseInt(`${Item.array[i].quantity}`);
   newRow.appendChild(newCell);
 
@@ -115,14 +121,21 @@ for (let i=0; i<Item.array.length;i++){
   newCell1.setAttribute('id','multi'+[i+1]);
   newRow.appendChild(newCell1);
 
-  // let deleteRow= document.createElement('button');
-  // deleteRow.textContent='Remove';
-  // deleteRow.setAttribute('id','remove'+[i+1]);
-  // newRow.appendChild(deleteRow);
+  let deleteRow= document.createElement('button');
+  deleteRow.textContent='Remove Item';
+  deleteRow.setAttribute('id','remove'+[i+1]);
+  newRow.appendChild(deleteRow);
+
+
 
   tableBody.appendChild(newRow);
+
+  let horizontalRuler=document.createElement('hr');
+  tableBody.appendChild(horizontalRuler);
+
   newRow.setAttribute('id','row'+[i+1]);
   total=total+Item.array[i].multiPrice;
+
 
 }
 
@@ -135,54 +148,58 @@ let totalHeader=document.createElement('th');
 totalHeader.textContent='TOTAL';
 footerRow.appendChild(totalHeader);
 let newCell=document.createElement('td');
-newCell.textContent= total;
+newCell.textContent=`${total} Jd` ;
 footerRow.appendChild(newCell);
+
+tableFooter.setAttribute('id','tfoot');
 //  remove an item from table
-// for(let i=0;i<Item.array.length;i++){
-//   document.getElementById('remove'+[i+1]).addEventListener('click', handle);
-// }
-// event listnere for quantity change
 for(let i=0;i<Item.array.length;i++){
-  document.getElementById('id'+[i]).addEventListener('change', changeQ);
+  document.getElementById('remove'+[i+1]).addEventListener('click', handle);
 }
+// // event listnere for quantity change
+// for(let i=0;i<Item.array.length;i++){
+//   document.getElementById('id'+[i]).addEventListener('change', changeQ);
+// }
 
 
-function changeQ(event){
 
 
-  let inputVal = parseInt(event.target.value);
-
-  for(let i=0;i<Item.array.length;i++){
-    if(Item.array[i].itemName===event.target.parentElement.firstChild.textContent){
-      Item.array[i].quantity=inputVal;
-      // console.log(Item.array);
-      Item.array[i].multiPrice=Item.array[i].quantity*Item.array[i].itemPrice;
-
-    }
+// function changeQ(event){
 
 
-    if(Item.array[i].itemName===event.target.parentElement.firstChild.textContent){
-      let cleanRows=document.getElementById('multi'+[i+1]);
-      cleanRows.innerHTML = 0;
+//   let inputVal = parseInt(event.target.value);
 
-      if(Item.array[i].itemName===event.target.parentElement.firstChild.textContent){
-        Item.array[i].multiPrice=parseInt(event.target.value)*Item.array[i].itemPrice;
-        // console.log(Item.array[i]);
+//   for(let i=0;i<Item.array.length;i++){
+//     if(Item.array[i].itemName===event.target.parentElement.firstChild.textContent){
+//       Item.array[i].quantity=inputVal;
+//       // console.log(Item.array);
+//       Item.array[i].multiPrice=Item.array[i].quantity*Item.array[i].itemPrice;
 
-        let newTot= document.getElementById('multi'+[i+1]);
-        newTot.textContent=`${Item.array[i].multiPrice}`;}
-
-    }
+//     }
 
 
-  }
-  updateTotal();
+//     if(Item.array[i].itemName===event.target.parentElement.firstChild.textContent){
+//       let cleanRows=document.getElementById('multi'+[i+1]);
+//       cleanRows.innerHTML = 0;
 
-  console.log(Item.array);
-  console.log(event.target,event.target.value);
+//       if(Item.array[i].itemName===event.target.parentElement.firstChild.textContent){
+//         Item.array[i].multiPrice=parseInt(event.target.value)*Item.array[i].itemPrice;
+//         // console.log(Item.array[i]);
+
+//         let newTot= document.getElementById('multi'+[i+1]);
+//         newTot.textContent=`${Item.array[i].multiPrice}`;}
+
+//     }
 
 
-}
+//   }
+//   updateTotal();
+
+//   console.log(Item.array);
+//   console.log(event.target,event.target.value);
+
+
+// }
 
 
 
@@ -195,48 +212,48 @@ function changeQ(event){
 
 
 // cart update
-let cartNumber=document.createElement('h6');
-function cartUpdate(){
-  const cartCount= document.getElementById('cartCount');
-  cartNum=0;
-  for (let i=1;i<=Item.array.length;i++){
-    if ((parseInt(Item.array.quantity)!== 0))
-    {
-      cartNum++;
+// let cartNumber=document.createElement('p');
+// function cartUpdate(){
+//   const cartCount= document.getElementById('cartName');
+//   cartNum=0;
+//   for (let i=1;i<=Item.array.length;i++){
+//     if ((parseInt(Item.array.quantity)!== 0))
+//     {
+//       cartNum++;
 
-    }
-    else{
-      cartNum--;
-
-
-    }
-
-    cartNumber.textContent=`(${cartNum})`;
-    cartCount.appendChild(cartNumber);
-
-  }}
-cartUpdate();
+//     }
+//     else{
+//       cartNum--;
 
 
+//     }
+
+//     cartNumber.textContent=`(${cartNum})`;
+//     cartCount.appendChild(cartNumber);
+
+//   }}
+// cartUpdate();
 
 
-// function handle(event){
-//   event.preventDefault();
-//   let imgClicked=event.target.parentElement.firstChild.textContent;
 
-//   console.log(imgClicked,event.target);
-//   let Index= Item.array.findIndex(function(todo,index){
-//     return todo.itemName===imgClicked;});
 
-//   console.log(Index);
-//   table.deleteRow(Index+1);
-//   Item.array.splice(Index,1);
-//   // console.log(Item.array);
-//   updateTotal();
-//   cartUpdate();
-//   console.log();
+function handle(event){
+  event.preventDefault();
+  let imgClicked=event.target.parentElement.firstChild.textContent;
 
-// }
+  console.log(imgClicked,event.target);
+  let Index= Item.array.findIndex(function(todo,index){
+    return todo.itemName===imgClicked;});
+
+  console.log(Index);
+  table.deleteRow(Index+1);
+  Item.array.splice(Index,1);
+  // console.log(Item.array);
+  updateTotal();
+  cartUpdate();
+  console.log();
+
+}
 
 // // update total
 function updateTotal(){
@@ -251,19 +268,47 @@ function updateTotal(){
   totalHeader.textContent='TOTAL';
   footerRow.appendChild(totalHeader);
   newCell=document.createElement('td');
-  newCell.textContent= total;
+  newCell.textContent= `${total} Jd`;
   footerRow.appendChild(newCell);
 }
 
-// let firstP=new Item ('rose1',3);
-// let secondP=new Item ('rose2',6);
-// let thirdP=new Item ('rose3',3);
-// let fourthP=new Item ('chocolatePlate',5);
+
+function openForm() {
+  document.getElementById('myForm').style.display = 'block';
+}
+
+function closeForm() {
+  document.getElementById('myForm').style.display = 'none';
+}
 
 
+let cartNumber=document.createElement('p');
+function cartUpdate(){
 
-// function getRandomIntInclusive(min, max) {
-//   min = Math.ceil(min);
-//   max = Math.floor(max);
-//   return Math.floor(Math.random() * (max - min + 1) + min);
-// }
+  const cartCount= document.getElementById('cartName');
+  cartNum=0;
+  for (let i=1;i<=Item.array.length;i++)
+    if ((parseInt(Item.array.quantity)!== 0))
+    {
+      cartNum++;
+      cartNumber.textContent=`(${cartNum})`;
+      cartCount.appendChild(cartNumber);
+    }
+
+
+  for (let i=1;i<=Item.array.length;i++){
+    if (document.getElementById('remove'+[i+1]).clicked === true)
+
+    {
+      cartNum--;
+
+    }
+
+    cartNumber.textContent=`(${cartNum})`;
+    cartCount.appendChild(cartNumber);
+
+  }
+  cartNumber.textContent=`(${cartNum})`;
+  cartCount.appendChild(cartNumber);
+}
+cartUpdate();

@@ -1,10 +1,32 @@
 main{
     top: 130px;
+    width: 95%;
     
 }
+header nav {
+    width: 60%;
+    display: inline-flex;
+    text-align: center;
+    justify-content:space-between;
+    margin: 49px auto auto 23%;
+    font-size: 25px;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+#cart a {
+    display: flex;
+    margin: 7px;
+    padding: 0px;
+    align-items: center;
+}
+body * {
+    margin: -1px 4px 6px 20px;
+}
+
 ::-webkit-scrollbar {
     width: 10px;
-  }
+    
+
+}
   
   /* Track */
   ::-webkit-scrollbar-track {
@@ -14,13 +36,13 @@ main{
    
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: rgb(133, 133, 133); 
+    background: #ad1010b9; 
     box-shadow: inset 0 0 5px rgb(77, 71, 71); 
     border-radius: 10px;
   }
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-    background: #ad1010b9; 
+    background: #ff0d0de0; 
   }
 
 
@@ -63,7 +85,6 @@ img{
     border: 1px solid gray;
     border-radius: 5px;
     position: relative;
-    display: inline-flex;
     float:right;
     width: 85%;
     margin-left: 5px;
@@ -72,7 +93,8 @@ img{
     overflow-y: scroll;
     text-align: center;
     justify-content:space-between;
-    top: 0px;display: none;
+    top: 0px;
+    display: none;
     overflow-x:hidden;
 }
 
@@ -95,19 +117,17 @@ img{
 }
 .cate img:hover {
     filter:contrast(1.5);
+    box-shadow: 4px 4px 12px rgba(43, 42, 42, 0.726);   
     
 }
 .cate img:hover + p{
     animation:all 5s ease-in ;
     transform: translate(4);
-    top:50%;
+    
 }
 .cate p{
-    /* display: block;
-    position:absolute;
-    text-align: center;
-    width: 95%; */
-    bottom: 5%;
+    font-weight: bold;    
+    top:50%;
     border-radius: 7px;
     display: block;
     position:absolute;
@@ -116,14 +136,14 @@ img{
     margin: 2px;
     left: 7%;
     /* top: 50%; */
-    color: rgba(199, 44, 2, 0.932);
+    color: rgba(0, 0, 0, 0.932);
     font-weight: bold;
     font-size: 140%;
     text-align: center;
-    text-shadow: 2px 2px 5px rgb(70, 67, 67);
+    text-shadow: 2px 2px 5px rgb(255, 239, 239);
     height: 12%;
     line-height: 120%;
-    background-color: rgb(211, 212, 211);
+    background-color: rgba(248, 255, 248, 0.664);
 }
 .giftItem{
 position: relative;
@@ -168,38 +188,39 @@ box-shadow: 3px 3px 5px rgba(128, 128, 128, 0.726);
     text-shadow: 1px 1px 2px black;
     height: 12%;
     line-height: 120%;
-    background-color: rgba(247, 201, 201, 0.884);
+    background-color: rgba(243, 243, 241, 0.767);
 }
 
 .giftItem .button{
     position: absolute;
+    border: none;
     width: 70%;
-    bottom: 6PX;
+    bottom: 8PX;
+    height: 35px;
     margin:auto 0% auto 00%;
     text-align: center;
     left: 15%;
     font-size: 15px;
-    background-color: rgb(136, 4, 4);
+    background-color: rgb(0, 0, 0);
     font-weight: bold;
-    color: rgb(238, 238, 128);
-    border-radius: 10px;   
+    color:white;
+    /* border-radius: 5px;    */
 }
 .giftItem .button:hover{
     font-size: 15px;
-    background-color: rgb(255, 91, 91);
+    background-color: rgb(81, 80, 80);
     font-weight: bold;
-    color: rgb(209, 255, 2);
+    color: rgb(255, 255, 255);
     
 }
 .giftItem .ItmQty{
     position: absolute;
-    
     border-radius: 7px;
-    width: 80%;
-    bottom: 15%;
+    width: 65%;
+    bottom: 20%;
     margin:auto 7% auto 7%;
     text-align: center;
-    left: 0;
+    left: 8%;
     font-size: 17px;
     font-weight: bold;
     background-color: rgba(245, 114, 114, 0.24);

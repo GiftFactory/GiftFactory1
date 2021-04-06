@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,27 +17,53 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=BenchNine:wght@300&display=swap" rel="stylesheet">
     <title> Random Gifts </title>
+
 </head>
+
 <body>
   <header>
     <section id="logo">
-      <img src="./images/re-draw logo invert.png" alt="logo"> 
-     <p id="logoName">Gift Factory</p>
-  </section>
-    <nav>
+      <img src="./images/re-draw logo invert.png" alt="logo">
+      <p id="logoName">Gift Factory</p>
+    </section>
+    <nav class="navbar">
+      <a href="#home">Home</a>
+
+      <div class="dropdown">
+        <button class="dropbtn">Our Gifts
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="customized.html">customized</a>
+          <a href="random.html">random</a>
+        </div>
+      </div>
+      <a href="">About Us</a>
+      <a href="#news">My Cart</a>
+    </nav>
+    <!-- <nav>
       <ul>
-        <!-- <li><img id="logo" src="images/4.2.png"> <h1 id="logoName">Gift Factory</h1> </li> -->
-        <li id="home"><a href="#">Home</a></li>
-        <li><a href="#">Products</a></li>
-        <li id="ContactUs"><a href="#">Contact Us</a></li>
+        <li id="home"><a href="http://127.0.0.1:5502/index.html">Home</a></li>
+         <div class="dropdown">
+    <button class="dropbtn"><a href="http://127.0.0.1:5502/customized.html">Our Gifts</a> 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="customized.html">Customized Gifts</a>
+      <a href="random.html">Random Gifts</a>
+      
+    </div>
+  </div> 
+        </li>
         <li id="AboutUs"><a href="#">About Us</a></li>
       </ul>
-    </nav>
+    </nav> -->
     <section id="cart">
-      <a href="http://"><img src="./images/image.png" alt="logo"> 
-      <p id="cartName">Cart</p></a>
+      <a href="myCart.html"><img src="./images/image.png" alt="logo">
+        <p id="cartName">Cart</p>
+      </a>
     </section>
-  </header> 
+  </header>
 
       <main>
           <section id="firstSec">
@@ -66,5 +94,5 @@
       <script src="./party.min.js"></script>
       <script src="js/random.js"></script>
 </body>
-</html>
 
+</html>

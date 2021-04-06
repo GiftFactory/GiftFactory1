@@ -1,131 +1,272 @@
-/* body {
-    background-color: cornsilk;
-    margin:auto 20px auto 20px;
-    position: relative ;
-    align-items: center;
-    text-align: center;
-}
-/* body *{
-  border: solid 2px  #d32727;
-  
-} */
-
-/* header */
-
-/* 
-header {
-    text-align: center;
-    background: #202020;
-    color: #000;
-    margin-bottom: 20px;
-    box-shadow:  #57575745; ;
-  }
-  header nav ul {
-    list-style: none;
-  }
-
-  #cartQtyIcon{
-
-  }
-  header nav ul li {
-    display: inline-block;
-    padding: 35px;
-    padding-left: 30px;
-    padding-right: 30px;
-  }
-  
-  header nav ul li  {
-    
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-    font-size: 25px;
-    font-weight: 100;
-  }
-
-  a{
-    text-decoration: none;
-    position: relative;
-    color:white;
-  }
-  header nav ul li:hover {
-    background-color: #57575745;
-  } */ 
- 
- 
  main {
   top: 100px;
  }
   
+
  
- h6{
-   font-size: 18px;
+  #cartName p{
+   font-size: 27.2px;
    position: relative;
    color:white;
-   left:20px;
-   bottom:7.5px
+   left:55px;
+   bottom:35px;
+   /* visibility:hidden; */
   }
  
  
  
- 
- 
   td,tr,th{
-   border:solid black 2px;
-   width:100px;
-   height:25px;
+   width:100px;                   /*  //// recheck///*/
+   height:25px; 
 
  }
  
- input{
-   width:75px;
+
+ tr{
+   margin-top: 20px;
  }
  
- img{
-   height:200%;
-   width:90%;
-  
- }
+  table img{
+   display: block;
+   width:100px;
+   height:50px;
+  text-align: center;
+  position: relative;
+  left: 35px;
  
+ }
+
+
+ table hr{
+   
+      width: 675%;
+       display: block;
+      unicode-bidi: isolate;
+      margin-block-start: 0.5em;
+      margin-block-end: 0.5em;
+      margin-inline-start: auto;
+      margin-inline-end: auto;
+      overflow: hidden;
+      border-style: inset;
+      border-width: 1px;
+      margin-left:25%;
+      border: 1px solid #ad1010b9 ;
+  }
+
  table{
+   padding:10px;
+   padding-left: 5px;
    text-align: center;
-   border: solid;
-   margin-left: 165px;
+   border: solid #ad1010b9 5px;
+   margin-left: 50px;
+   margin-top:25px;
    width:75%;
+   font-family: Arial, Helvetica, sans-serif;
    
  }
+
 
  #cartTable
  {
    height:100%;
-   width:100%;
-   text-align:center;
-   border: black solid ;
+   width:95%;
+   /* text-align:center; */
+   /* border: black solid ; */
    padding-top: 20px;
-   margin-top: 20px;
+   margin-top: 25px;
+
 
  }
+ 
+ #cartTable h1{
+   text-align: left;
+   font-family: 'Open Sans Condensed', sans-serif;
+   color:#ad1010b9;
+}
+
+h3{
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-family: 'Open Sans Condensed', sans-serif;
+}
  
  button{
-   height:45%;
-   background-color: brown;
-   border-radius: 5px;
+   height:30px;
+   padding: 5px 10px;
+   background-color: black;
+   border-radius: 2px;
    margin-top: 20px;
+   color:white;
+   border: black;
  }
  
+ button:hover{
+  background-color:rgb(81,80,80);
+  
+
+ }
  
- 
- /* footer */
- /* footer{
-    clear: both;
-    color: #ffffff;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    text-align: center;
-    padding: 20px;
-    background-color: #000000;
-    margin-top: 20px;
-  } */
+
+ footer{
+  clear: both;
+  color: #FFFFFF;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  text-align: center;
+  padding-top: 7px;
+  padding-bottom: 1px;
+  background-color:#000000;
+  margin-top: 584px;
+  width: 100%;
+  margin-left: 0%;
+  
+  }
 
 
+
+
+
+
+
+
+.open-button {
+  background-color: black;
+  color: white;
+  padding: 5px 10px;
+
+  border: none;
+  cursor: pointer;
+  opacity: 1;
+  position: fixed;
+  bottom: 90px;
+  right: 0px;
+  width: 180px;
+  border-radius: 3px;
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left:450px;
+  /* border:  solid #0a0a0a; */
+  z-index: 9999999;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 50%;
+  max-height: 100%;
+  padding: 15px;
+  background-color: white;
+  padding-left: 35px;
+  border: solid #ad1010b9 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+/* Full-width input fields */
+.form-container input[type=text], .form-container input[type=password] {
+  width: 80%;
+  padding: 15px;
+  margin: 10px 0 10px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 8px 20px 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 50%;
+  margin-bottom:10px;
+  opacity: 0.7;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+
+.method{
+  display: inline;
+}
+
+
+
+
+
+ 
+#logoName{
+  font-family: 'Sacramento', cursive;
+  font-size: 100%;
+  color: #FFFFFF;
+  display:inline;
+  
 
   
+}
+#logo{
+  font-family: 'Sacramento', cursive;
+  font-size: 190%;
+  color: #FFFFFF;
+  display:inline-flex;
+  align-items: center;
+  position: absolute;
+  width: 260px;
+  padding: 1px;
+}
+#logo img{
+  width: 100px;
+  margin: -17px;
+  margin-top: -2%;
+}
+#logo p{
+  margin: 8px;
+  margin-top: 23%;
+  font-size: 105%;
+}
+  h2 {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 200%;
+} 
+
+#cart{
+  position: relative;
+right:25px;
+} 
+
+#cartName{
+  position: relative;
+top:15px;
+font-size: 27.2px;}
+
+
+/* 
+//scrollbar// */
+
+html {
+    display: block;
+} 
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: #ad1010b9;
+    box-shadow: inset 0 0 5px rgb(77 71 71);
+    border-radius: 10px;
+}

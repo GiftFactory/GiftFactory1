@@ -11,25 +11,48 @@
 <body>
   <header>
     <section id="logo">
-      <img src="./images/re-draw logo invert.png" alt="logo"> 
-     <p id="logoName">Gift Factory</p>
-  </section>
-    <nav>
+      <img src="./images/re-draw logo invert.png" alt="logo">
+      <p id="logoName">Gift Factory</p>
+    </section>
+    <nav class="navbar">
+      <a href="index.html">Home</a>
+     
+      <div class="dropdown">
+        <button class="dropbtn">Our Gifts  
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="customized.html">customized</a>
+          <a href="random.html">random</a>
+        </div>
+      </div> 
+      <a href="">About Us</a>
+      <a href="myCart.html">My Cart</a>
+    </nav>
+    <!-- <nav>
       <ul>
-        <!-- <li><img id="logo" src="images/4.2.png"> <h1 id="logoName">Gift Factory</h1> </li> -->
-        <li id="home"><a href="#">Home</a></li>
-        <li><a href="#">Products</a></li>
-        <li id="ContactUs"><a href="#">Contact Us</a></li>
+        <li id="home"><a href="http://127.0.0.1:5502/index.html">Home</a></li>
+         <div class="dropdown">
+    <button class="dropbtn"><a href="http://127.0.0.1:5502/customized.html">Our Gifts</a> 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="customized.html">Customized Gifts</a>
+      <a href="random.html">Random Gifts</a>
+      
+    </div>
+  </div> 
+        </li>
         <li id="AboutUs"><a href="#">About Us</a></li>
       </ul>
-    </nav>
+    </nav> -->
     <section id="cart">
-      <a href="myCart.html"><img src="./images/image.png" alt="logo"> 
-      <p id="cartName">Cart</p></a>
+      <a href="myCart.html"><img src="./images/image.png" alt="logo">
+        <p id="cartName">Cart</p>
+      </a>
     </section>
   </header>
   <Main>
-    
     <section id="secGiftBuilder" class ="secGiftBuilder">
       <section id="giftCate" class ="giftCate">
         
@@ -56,8 +79,8 @@
         <section id="giftItem1" class ="giftItem">
         <form action="submit">
           
-          <img src="./customImages/fl-backage 1 (5).jpg" alt="img1-1">
-          <p>10.00</p>
+          <img src="./customImages/fl-backage 1 (5).jpg" alt="Package1">
+          <p>10.00 JD</p>
           
           <input type="number" name="ItmQty" id="ItmQty" class="ItmQty" min="1" value="1">    
           <input type="submit" value="Add To Cart" class ="button btn-cart">
@@ -66,8 +89,8 @@
         </section>
         <section id="giftItem2" class ="giftItem">
           <form action="submit">
-          <img src="./customImages/fl-backage 1 (9).jpg" alt="img1-2">
-          <p>10.00</p>
+          <img src="./customImages/fl-backage 1 (9).jpg" alt="Package2">
+          <p>10.00 JD</p>
           <input type="number" name="ItmQty" id="ItmQty" class="ItmQty" min="1" value="1">
           <input type="submit" value="Add To Cart" class ="button btn-cart">
          </form>
@@ -75,24 +98,24 @@
         </section>
         <section id="giftItem3" class ="giftItem">
           <form action="submit">
-          <img src="./customImages/ch-backage 5 (1).jpg" alt="img1-3">
-          <p>10.00</p>
+          <img src="./customImages/ch-backage 5 (1).jpg" alt="Package3">
+          <p>10.00 JD</p>
           <input type="number" name="ItmQty" id="ItmQty" class="ItmQty" min="1" value="1">
           <input type="submit" value="Add To Cart" class ="button btn-cart">
          </form>
         </section>
         <section id="giftItem4" class ="giftItem">
           <form action="submit">
-          <img src="customImages/cos-backage 8 (4).jpg" alt="img1-4">
-          <p>10.00</p>
+          <img src="customImages/cos-backage 8 (4).jpg" alt="Package4">
+          <p>10.00 JD</p>
           <input type="number" name="ItmQty" id="ItmQty" class="ItmQty" min="1" value="1">
           <input type="submit" value="Add To Cart" class ="button btn-cart">
          </form>
         </section>
         <section id="giftItem5" class ="giftItem">
           <form action="submit">
-          <img src="./customImages/care-backage 5 (13).jpg" alt="">
-          <p>10.00</p>
+          <img src="./customImages/care-backage 5 (13).jpg" alt="Packages">
+          <p>10.00 JD</p>
           <input type="number" name="ItmQty" id="ItmQty" class="ItmQty" min="1" value="1">
           <input type="submit" value="Add To Cart" class ="button btn-cart">
          </form>
@@ -101,8 +124,8 @@
       <section id="giftItems2" class ="giftItems">
           <section id="giftItem1" class ="giftItem">
             <form action="submit">
-          <img src="./customImages/flower-backage (1).jpg" alt="img1-5">
-            <p> Flowers Jd</p>
+          <img src="./customImages/flower-backage (1).jpg" alt="Red Flowers">
+            <p>10.00 JD</p>
             <input type="number" name="ItmQty" id="ItmQty" class="ItmQty" min="1" value="1">
             <input type="submit" value="Add To Cart" class ="button btn-cart">
          </form>
@@ -110,8 +133,8 @@
           </section>
           <section id="giftItem2" class ="giftItem">
             <form action="submit">
-          <img src="./customImages/flower-backage (2).jpg" alt="img2-1">
-            <p>10.00</p>
+          <img src="./customImages/flower-backage (2).jpg" alt="Red Flowers">
+            <p>10.00 JD</p>
             <input type="number" name="ItmQty" id="ItmQty" class="ItmQty" min="1" value="1">
             <input type="submit" value="Add To Cart" class ="button btn-cart">
          </form>
@@ -119,23 +142,23 @@
           </section>
           <section id="giftItem3" class ="giftItem">
             <form action="submit">
-          <img src="./customImages/flower-backage (3).jpg" alt="img2-2">
-            <p>10.00</p>
+          <img src="./customImages/flower-backage (3).jpg" alt="Pink Flowers">
+            <p>10.00 JD</p>
             <input type="number" name="ItmQty" id="ItmQty" class="ItmQty" min="1" value="1">
             <input type="submit" value="Add To Cart" class ="button btn-cart">
          </form>
           </section>
           <section id="giftItem4" class ="giftItem">
             <form action="submit">
-          <img src="./customImages/flower-backage (4).jpg" alt="img2-3">
-            <p>10.00</p>
+          <img src="./customImages/flower-backage (4).jpg" alt="Pink Heart flowers">
+            <p>10.00 JD</p>
             <input type="number" name="ItmQty" id="ItmQty" class="ItmQty" min="1" value="1">
             <input type="submit" value="Add To Cart" class ="button btn-cart">
          </form>
           </section>
       </section>
       <section id="giftItems3" class ="giftItems">
-        <section id="giftItem1" class ="giftItem">
+       <section id="giftItem1" class ="giftItem">
           <form action="submit">
           <img src="./customImages/ch-backage 5 (15).jpg" alt="img2-4">
           <p> Chocolate </p>
@@ -156,7 +179,7 @@
           <section id="giftItem2" class ="giftItem">
             <form action="submit">
           <img src="http://via.placeholder.com/450x450" alt="">
-            <p>10.00</p>
+            <p>10.00 JD</p>
             <input type="number" name="ItmQty" id="ItmQty" class="ItmQty" min="1" value="1">
             <input type="submit" value="Add To Cart" class ="button btn-cart">
          </form>
@@ -165,7 +188,7 @@
           <section id="giftItem3" class ="giftItem">
             <form action="submit">
           <img src="http://via.placeholder.com/450x450" alt="">
-            <p>10.00</p>
+            <p>10.00 JD</p>
             <input type="number" name="ItmQty" id="ItmQty" class="ItmQty" min="1" value="1">
             <input type="submit" value="Add To Cart" class ="button btn-cart">
          </form>
@@ -173,7 +196,7 @@
           <section id="giftItem4" class ="giftItem">
             <form action="submit">
           <img src="http://via.placeholder.com/450x450" alt="">
-            <p>10.00</p>
+            <p>10.00 JD</p>
             <input type="number" name="ItmQty" id="ItmQty" class="ItmQty" min="1" value="1">
             <input type="submit" value="Add To Cart" class ="button btn-cart">
          </form>
