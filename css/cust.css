@@ -232,13 +232,13 @@ box-shadow: 3px 3px 5px rgba(128, 128, 128, 0.726);
 
    footer p{
         position: relative;
-        left:2.5px;
+        
       }
 
       footer{
         
         margin-bottom: -10px;
-        width:1365px;
+        width:100%;
         margin-right: -15px;
         margin-left: -15px;
         margin-top:10px;
@@ -246,5 +246,4 @@ box-shadow: 3px 3px 5px rgba(128, 128, 128, 0.726);
         position: relative;
         top:161px;
         left:15px;
-      overflow-x: hidden;
        }  
