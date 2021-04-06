@@ -142,7 +142,7 @@ function next3(){
       myimages.title= `Random Gift With ${event.target.value} Box`;
       // ***************local Storage :
       localStorageArray[2]=(`./giftColors/${event.target.value}.png`);
-      localStorageArray[0]=`Random Gift With ${event.target.value} Box`;
+      localStorageArray[0]='Random Gift';
 
       myimages.height = 300;
       myimages.width = 300;
@@ -238,6 +238,8 @@ function price (){
     localStorageArray[3]=(itemPrice);
     console.log(localStorageArray);
     settingItem();
+    fistDisplay ();
+
 
     const h1El = document.createElement('h1');
     priceID.appendChild (h1El);
@@ -282,7 +284,7 @@ let localStorageArray=['','','',''];
 
 // localStorageArray[0]=('RandomItem');
 localStorageArray[1]=('1');
-settingItem();
+// settingItem();
 function settingItem(){
   let stringObj = JSON.stringify(localStorageArray);
   localStorage.setItem('Gift',stringObj);
@@ -291,7 +293,6 @@ function settingItem(){
 
 
 // ***************celebrating function:
-=======
 // function gettingItem(){
 //   let product = localStorage.getItem('Gift');
 //   if(product) {
@@ -305,13 +306,14 @@ function settingItem(){
 function fistDisplay (){
   let QtyInCart=0;
   storedItems =JSON.parse(localStorage.getItem('gift2cart'));
-  let storedRandItem=localStorage.getItem('Gift');
+  let storedRandItem=JSON.parse(localStorage.getItem('Gift'));
   console.log(storedItems);
   if(storedItems!==null){
     QtyInCart=+storedItems.length;
   }
-  if(storedRandItem!==null){
-    QtyInCart=+storedItems.length;
+  // debugger;
+  if(storedRandItem!==null && storedRandItem[0] !== ''){
+    QtyInCart=+1;
   }
   let cartNameEl =document.getElementById('cartName');
   cartNameEl.textContent =`Cart (${QtyInCart})`;

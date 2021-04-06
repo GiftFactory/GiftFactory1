@@ -11,7 +11,7 @@ function fistDisplay (){
     QtyInCart=+storedItems.length;
   }
   if(storedRandItem!==null){
-    QtyInCart=+storedItems.length;
+    QtyInCart=+1;
   }
   let cartNameEl =document.getElementById('cartName');
   cartNameEl.textContent =`Cart (${QtyInCart})`;
