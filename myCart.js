@@ -156,50 +156,50 @@ tableFooter.setAttribute('id','tfoot');
 for(let i=0;i<Item.array.length;i++){
   document.getElementById('remove'+[i+1]).addEventListener('click', handle);
 }
-// event listnere for quantity change
-for(let i=0;i<Item.array.length;i++){
-  document.getElementById('id'+[i]).addEventListener('change', changeQ);
-}
+// // event listnere for quantity change
+// for(let i=0;i<Item.array.length;i++){
+//   document.getElementById('id'+[i]).addEventListener('change', changeQ);
+// }
 
 
 
 
-function changeQ(event){
+// function changeQ(event){
 
 
-  let inputVal = parseInt(event.target.value);
+//   let inputVal = parseInt(event.target.value);
 
-  for(let i=0;i<Item.array.length;i++){
-    if(Item.array[i].itemName===event.target.parentElement.firstChild.textContent){
-      Item.array[i].quantity=inputVal;
-      // console.log(Item.array);
-      Item.array[i].multiPrice=Item.array[i].quantity*Item.array[i].itemPrice;
+//   for(let i=0;i<Item.array.length;i++){
+//     if(Item.array[i].itemName===event.target.parentElement.firstChild.textContent){
+//       Item.array[i].quantity=inputVal;
+//       // console.log(Item.array);
+//       Item.array[i].multiPrice=Item.array[i].quantity*Item.array[i].itemPrice;
 
-    }
-
-
-    if(Item.array[i].itemName===event.target.parentElement.firstChild.textContent){
-      let cleanRows=document.getElementById('multi'+[i+1]);
-      cleanRows.innerHTML = 0;
-
-      if(Item.array[i].itemName===event.target.parentElement.firstChild.textContent){
-        Item.array[i].multiPrice=parseInt(event.target.value)*Item.array[i].itemPrice;
-        // console.log(Item.array[i]);
-
-        let newTot= document.getElementById('multi'+[i+1]);
-        newTot.textContent=`${Item.array[i].multiPrice}`;}
-
-    }
+//     }
 
 
-  }
-  updateTotal();
+//     if(Item.array[i].itemName===event.target.parentElement.firstChild.textContent){
+//       let cleanRows=document.getElementById('multi'+[i+1]);
+//       cleanRows.innerHTML = 0;
 
-  console.log(Item.array);
-  console.log(event.target,event.target.value);
+//       if(Item.array[i].itemName===event.target.parentElement.firstChild.textContent){
+//         Item.array[i].multiPrice=parseInt(event.target.value)*Item.array[i].itemPrice;
+//         // console.log(Item.array[i]);
+
+//         let newTot= document.getElementById('multi'+[i+1]);
+//         newTot.textContent=`${Item.array[i].multiPrice}`;}
+
+//     }
 
 
-}
+//   }
+//   updateTotal();
+
+//   console.log(Item.array);
+//   console.log(event.target,event.target.value);
+
+
+// }
 
 
 
@@ -212,27 +212,27 @@ function changeQ(event){
 
 
 // cart update
-let cartNumber=document.createElement('h6');
-function cartUpdate(){
-  const cartCount= document.getElementById('cartCount');
-  cartNum=0;
-  for (let i=1;i<=Item.array.length;i++){
-    if ((parseInt(Item.array.quantity)!== 0))
-    {
-      cartNum++;
+// let cartNumber=document.createElement('p');
+// function cartUpdate(){
+//   const cartCount= document.getElementById('cartName');
+//   cartNum=0;
+//   for (let i=1;i<=Item.array.length;i++){
+//     if ((parseInt(Item.array.quantity)!== 0))
+//     {
+//       cartNum++;
 
-    }
-    else{
-      cartNum--;
+//     }
+//     else{
+//       cartNum--;
 
 
-    }
+//     }
 
-    cartNumber.textContent=`(${cartNum})`;
-    cartCount.appendChild(cartNumber);
+//     cartNumber.textContent=`(${cartNum})`;
+//     cartCount.appendChild(cartNumber);
 
-  }}
-cartUpdate();
+//   }}
+// cartUpdate();
 
 
 
@@ -272,19 +272,6 @@ function updateTotal(){
   footerRow.appendChild(newCell);
 }
 
-// let firstP=new Item ('rose1',3);
-// let secondP=new Item ('rose2',6);
-// let thirdP=new Item ('rose3',3);
-// let fourthP=new Item ('chocolatePlate',5);
-
-
-
-// function getRandomIntInclusive(min, max) {
-//   min = Math.ceil(min);
-//   max = Math.floor(max);
-//   return Math.floor(Math.random() * (max - min + 1) + min);
-// }
-
 
 function openForm() {
   document.getElementById('myForm').style.display = 'block';
@@ -293,3 +280,35 @@ function openForm() {
 function closeForm() {
   document.getElementById('myForm').style.display = 'none';
 }
+
+
+let cartNumber=document.createElement('p');
+function cartUpdate(){
+
+  const cartCount= document.getElementById('cartName');
+  cartNum=0;
+  for (let i=1;i<=Item.array.length;i++)
+    if ((parseInt(Item.array.quantity)!== 0))
+    {
+      cartNum++;
+      cartNumber.textContent=`(${cartNum})`;
+      cartCount.appendChild(cartNumber);
+    }
+
+
+  for (let i=1;i<=Item.array.length;i++){
+    if (document.getElementById('remove'+[i+1]).clicked === true)
+
+    {
+      cartNum--;
+
+    }
+
+    cartNumber.textContent=`(${cartNum})`;
+    cartCount.appendChild(cartNumber);
+
+  }
+  cartNumber.textContent=`(${cartNum})`;
+  cartCount.appendChild(cartNumber);
+}
+cartUpdate();
