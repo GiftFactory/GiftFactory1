@@ -11,14 +11,23 @@
       <img src="./images/re-draw logo invert.png" alt="logo">
       <p id="logoName">Gift Factory</p>
     </section>
-    <nav>
-      <ul>
-        <li id="home"><a href="index.html">Home</a></li>
-        <li><a href="customized.html">Our Gifts</a></li>
-        <li id="ContactUs"><a href="aboutUs.html">About Us</a></li>
-        <li id="AboutUs"><a href="myCart.html">My cart</a></li>
-      </ul>
+    <nav class="navbar">
+      <a href="index.html">Home</a>
+
+      <div class="dropdown">
+        <button class="dropbtn">
+          <p class="pp">Our Gifts</p>
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="customized.html">customized</a>
+          <a href="random.html">random</a>
+        </div>
+      </div>
+      <a href="aboutUs.html">About Us</a>
+      <a href="myCart.html">My Cart</a>
     </nav>
+
     <section id="cart">
       <a href="myCart.html"><img src="./images/image.png" alt="logo">
         <p id="cartName">Cart</p>
@@ -81,6 +90,7 @@
   </main>
   <footer>
     &copy; 2021 | GiftFactory Powered By GiftMakers
+  </footer>
 
 </body>
 </html>
