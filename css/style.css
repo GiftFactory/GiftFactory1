@@ -291,6 +291,9 @@ body{
     background: #faf3e07a;
     text-align: center;
     margin: 0px;
+    animation-name: example;
+animation-duration: 3s;
+position: relative;
 }
 #brief2{
   font-family: 'Dancing Script', cursive;;
@@ -300,6 +303,22 @@ body{
   text-align: center;
   padding-bottom: 40px;
 margin: 0px;
+animation-name: example;
+animation-duration: 3s;
+position: relative;
+}
+/* @keyframes example {
+  0%   { left:0px; top:0px;}
+  25%  { left:200px; top:0px;}
+  50%  { left:200px; top:200px;}
+  75%  { left:0px; top:200px;}
+  100% { left:0px; top:0px;}
+} */
+@keyframes example {
+  0%   { left:0px; top:0px;}
+  25%  {left:200px; top:0px;}
+  50%  {right:400px;top:0px;}
+  100% { left:0px; top:0px;}
 
 }
 #brief3{
@@ -308,6 +327,9 @@ margin: 0px;
   background: #faf3e07a;
   text-align: center;
   margin: 0px;
+  animation-name: example;
+animation-duration: 3s;
+position: relative;
 
 
 }
@@ -317,6 +339,9 @@ margin: 0px;
   background: #faf3e07a;
   text-align: center;
   margin: 0px;
+  animation-name: example;
+animation-duration: 3s;
+position: relative;
 
 }
 
