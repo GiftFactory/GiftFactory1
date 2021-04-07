@@ -157,3 +157,17 @@ padding: 5px 3px 5px 3px; */
     margin-bottom: 30px;
 } */
 
+footer {
+    clear: both;
+    color: #FFFFFF;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color:#000000;
+    margin-top: 512px;
+    width: 100%;
+    margin-left: 0%;
+    margin-bottom: -1%;
+    /* width: 100%; */
+}
