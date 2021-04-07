@@ -1,4 +1,3 @@
-'use strict';
 
 let itemPrice=0;
 let clicks = 0;
