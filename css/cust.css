@@ -56,9 +56,9 @@ body * {
 body {
     height:10px;
 }
-footer{
-    margin-top: 10%;
-}
+/* footer{
+    margin-top: 10%; */
+
 img{
     border-radius: 7px;
 }
@@ -229,21 +229,17 @@ box-shadow: 3px 3px 5px rgba(128, 128, 128, 0.726);
         display:inline-flex;
     }
 
-
-   footer p{
-        position: relative;
-        
-      }
-
-      footer{
-        
-        margin-bottom: -10px;
-        width:100%;
-        margin-right: -15px;
-        margin-left: -15px;
-        margin-top:10px;
-        padding-top:20px;
-        position: relative;
-        top:161px;
-        left:15px;
-       }  
+    footer {
+        clear: both;
+        color: #FFFFFF;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        text-align: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        background-color:#000000;
+        margin-top: 512px;
+        width: 100%;
+        margin-left: 0%;
+        margin-bottom: -1%;
+        /* width: 100%; */
+    }

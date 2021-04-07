@@ -116,19 +116,19 @@ h3{
 
  
 
- footer{
+ /* footer{
   clear: both;
   color: #FFFFFF;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   text-align: center;
-  padding-top: 7px;
-  padding-bottom: 1px;
+  padding-top: 6px;
+  padding-bottom: -9px;
   background-color:#000000;
   margin-top: 584px;
   width: 100%;
   margin-left: 0%;
   
-  }
+  } */
 
 
 
@@ -374,15 +374,17 @@ html {
 }
 
 
-footer p{
-  position: relative;
-  left:22.5px;
-}
-footer{
-  margin-bottom: -10px;
-  width:1358px;
-  margin-left: -10px;
-  margin-top:100px;
-  padding-top:20px;
-
+footer {
+  clear: both;
+  color: #FFFFFF;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color:#000000;
+  margin-top: 512px;
+  width: 100%;
+  margin-left: 0%;
+  margin-bottom: -1%;
+  /* width: 100%; */
 }
