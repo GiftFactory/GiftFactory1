@@ -96,6 +96,7 @@ table.appendChild(tableBody);
 
 
 for (let i=0; i<Item.array.length;i++){
+
   let newRow= document.createElement('tr');
   let newCell= document.createElement('td');
   newCell.textContent=`${Item.array[i].itemName}`;
@@ -137,6 +138,7 @@ for (let i=0; i<Item.array.length;i++){
 
   let horizontalRuler=document.createElement('hr');
   tableBody.appendChild(horizontalRuler);
+  horizontalRuler.setAttribute('id','hr'+[i]);
 
   newRow.setAttribute('id','row'+[i+1]);
   total=total+Item.array[i].multiPrice;
@@ -161,88 +163,10 @@ tableFooter.setAttribute('id','tfoot');
 for(let i=0;i<Item.array.length;i++){
   document.getElementById('remove'+[i+1]).addEventListener('click', handle);
 }
-// // event listnere for quantity change
-// for(let i=0;i<Item.array.length;i++){
-//   document.getElementById('id'+[i]).addEventListener('change', changeQ);
-// }
-
-
-
-
-// function changeQ(event){
-
-
-//   let inputVal = parseInt(event.target.value);
-
-//   for(let i=0;i<Item.array.length;i++){
-//     if(Item.array[i].itemName===event.target.parentElement.firstChild.textContent){
-//       Item.array[i].quantity=inputVal;
-//       // console.log(Item.array);
-//       Item.array[i].multiPrice=Item.array[i].quantity*Item.array[i].itemPrice;
-
-//     }
-
-
-//     if(Item.array[i].itemName===event.target.parentElement.firstChild.textContent){
-//       let cleanRows=document.getElementById('multi'+[i+1]);
-//       cleanRows.innerHTML = 0;
-
-//       if(Item.array[i].itemName===event.target.parentElement.firstChild.textContent){
-//         Item.array[i].multiPrice=parseInt(event.target.value)*Item.array[i].itemPrice;
-//         // console.log(Item.array[i]);
-
-//         let newTot= document.getElementById('multi'+[i+1]);
-//         newTot.textContent=`${Item.array[i].multiPrice}`;}
-
-//     }
-
-
-//   }
-//   updateTotal();
-
-//   console.log(Item.array);
-//   console.log(event.target,event.target.value);
-
-
-// }
-
-
-
-
-
-
-
-
-
-
-
-// cart update
-// let cartNumber=document.createElement('p');
-// function cartUpdate(){
-//   const cartCount= document.getElementById('cartName');
-//   cartNum=0;
-//   for (let i=1;i<=Item.array.length;i++){
-//     if ((parseInt(Item.array.quantity)!== 0))
-//     {
-//       cartNum++;
-
-//     }
-//     else{
-//       cartNum--;
-
-
-//     }
-
-//     cartNumber.textContent=`(${cartNum})`;
-//     cartCount.appendChild(cartNumber);
-
-//   }}
-// cartUpdate();
-
-
 
 
 function handle(event){
+  let counterEl=document.getElementById('cartName');
   event.preventDefault();
   let imgClicked=event.target.parentElement.firstChild.textContent;
 
@@ -254,11 +178,29 @@ function handle(event){
   table.deleteRow(Index+1);
   Item.array.splice(Index,1);
   // console.log(Item.array);
+
   updateTotal();
-  cartUpdate();
+
+
+  let gift2cartArray=JSON.parse(localStorage.getItem('gift2cart'));
+  if(Index<gift2cartArray.length){
+    gift2cartArray.splice(Index,1);
+    localStorage.setItem('gift2cart',JSON.stringify(gift2cartArray));
+  }
+  else{
+    localStorage.removeItem('Gift');
+  }
+
+  counterEl.textContent=`Cart (${Item.array.length})`;
 
 }
 console.log(Item.array);
+
+
+
+
+
+
 
 // // update total
 function updateTotal(){
@@ -288,8 +230,8 @@ function closeForm() {
 
 
 let cartNumber=document.createElement('p');
-function cartUpdate(){
 
+function cartUpdate(){
   const cartCount= document.getElementById('cartName');
   cartNum=0;
   for (let i=1;i<=Item.array.length;i++)
@@ -300,13 +242,12 @@ function cartUpdate(){
       cartCount.appendChild(cartNumber);
     }
 
+  for (let i=0;i<Item.array.length;i++){
+    console.log('remove'+[i+1]);
 
-  for (let i=1;i<Item.array.length;i++){
     if (document.getElementById('remove'+[i+1]).clicked === true)
-
     {
       cartNum--;
-
     }
 
     cartNumber.textContent=`(${cartNum})`;
@@ -317,3 +258,12 @@ function cartUpdate(){
   cartCount.appendChild(cartNumber);
 }
 cartUpdate();
+
+
+
+
+const deleteStorage=document.getElementById('black').addEventListener('click',removeStorage);
+function removeStorage(){
+  localStorage.clear();
+  horizontalRuler.style.visibility='hidden';
+}
