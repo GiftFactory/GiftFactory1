@@ -260,3 +260,10 @@ box-shadow: 3px 3px 5px rgba(128, 128, 128, 0.726);
         margin-bottom: -1%;
         /* width: 100%; */
     }
+    #cartName{
+        position: relative;
+        top:-7px;
+        
+      
+      }
+      
