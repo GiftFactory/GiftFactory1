@@ -57,11 +57,11 @@ for(let i=0;i<btnAdd2Cart.length;i++){
   btnAdd2Cart[i].addEventListener('submit',btn);}
 function btn (event){
   event.preventDefault();
-  let giftName = event.target.children[0].alt;
+  let giftName = event.target.children[1].textContent;
   let giftpath = event.target.children[0].src;
-  let giftPrice =parseFloat(event.target.children[1].textContent);
-  let giftQty = event.target.children[2].value;
-  let btnAdd = event.target.children[3].value;
+  let giftPrice =parseFloat(event.target.children[2].textContent);
+  let giftQty = event.target.children[3].value;
+  let btnAdd = event.target.children[4].value;
   let added=0;
   if (btnAdd==='Add To Cart'){
     if(Gifts.all.length>0){
