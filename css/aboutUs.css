@@ -13,7 +13,7 @@ body{
   font-family: 'Open Sans Condensed', sans-serif;
 }
 
-/* header  */
+/* header --------------------------------------------- */
 header {
   z-index: 9999;
   position: fixed;
@@ -29,7 +29,7 @@ header {
 }
   header nav  {
     width: 70%;
-    margin: 100px auto auto 20%;
+    margin: 29px auto auto 21%;
   }
   header nav ul li {
     display: inline-block;
@@ -46,9 +46,86 @@ header {
     color:white;
     padding-left: 50px
   }
-  /* header nav ul li:hover {
+  header nav ul li:hover {
     background-color: #57575745;
-  } */
+  }
+
+  .navbar a {
+    float: left;
+    font-size: 26px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    padding: 14px 70px;
+    text-decoration: none;
+  }
+  
+  .dropdown {
+    float: left;
+    overflow: hidden;
+    margin-left: 4%;
+    margin-right: 0%;
+    
+  }
+  
+  
+  .dropdown .dropbtn {
+    font-size: 26px;  
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 0px 0px 0px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+    
+  }
+  
+  .navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: rgb(61, 54, 54);
+    display: inline-flex;
+    text-align: center;
+    justify-content: space-between;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    margin: 0px;
+    width: 128px;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #ddd;
+     display: inline-flex;
+      text-align: center;
+      justify-content: space-between;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  .pp{
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 150px;
+  }
+
+
+  
   #logoName{
     font-family: 'Sacramento', cursive;
     font-size: 100%;
@@ -67,12 +144,12 @@ header {
   #logo img{
     width: 92px;
     margin: -17px;
-    margin-top: -2%;
+    margin-top: -6%;
     margin-left: auto;
   }
   #logo p{
     margin: 8px;
-    margin-top: 23%;
+    margin-top: 18%;
     font-size: 105%;
   }
   ul{
@@ -88,9 +165,8 @@ header {
     color: #FFFFFF;
     display:block;
     align-items: center;
-    margin-top: 1%;
-    /* margin-right: 30%; */
-    padding: 1px;
+    margin-top: 0%;
+    padding: 5px;
   }
   #cart img{
     width: 50px;
@@ -101,7 +177,6 @@ header {
     font-family: 'Sacramento', cursive;
     font-size: 170%;
     color: #FFFFFF;
-    /* font-weight: bold; */
     padding-top: 30%;
   }
   #cart a {
@@ -112,7 +187,6 @@ header {
   }
   #cart a *{
     margin: -4px;
-    /* padding:0px; */
   }
 
   /* header ----------------------------------------------------------------------------- */
@@ -193,13 +267,14 @@ header {
 
 /* AboutUs -----------------------------------------------------------------------*/
 
+/* Footer ----------------------------------------------------------------------- */
 footer {
   clear: both;
   color: #FFFFFF;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   text-align: center;
-  padding-top: 40px;
-  padding-bottom: 1px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   background-color:#000000;
   width: 100%;
   margin-left: 0%;
