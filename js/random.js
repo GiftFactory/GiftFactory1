@@ -281,7 +281,7 @@ function final (){
   finalID.appendChild(br);
   const myimages = document.createElement('img');
   finalID.appendChild(myimages);
-  myimages.src= 'icons/shopping cart.gif';
+  myimages.src= './icons/shopping cart.gif';
   myimages.width=150;
 
 }
