@@ -202,6 +202,9 @@ align-items: center;
    padding: 15%;
    background-size: 100%;
    background-image: url(../images/slide1.jpg);
+   opacity: 0.8;
+
+   /* background-color: rgb(221, 212, 181,0.7); */
    background-position: center;
    width: 74%;
    margin-left: -2%;
@@ -288,17 +291,18 @@ body{
   #brief{
     font-family: 'Open Sans Condensed', sans-serif;
     font-size: 50px;
-    background: #faf3e07a;
+    /* background: #faf3e07a; */
     text-align: center;
     margin: 0px;
     animation-name: example;
 animation-duration: 3s;
 position: relative;
+padding-left: 550px;
 }
 #brief2{
   font-family: 'Dancing Script', cursive;;
   font-size: 130px;
-  background: #faf3e07a;
+  /* background: #faf3e07a; */
   color: rgb(167, 3, 3)	;
   text-align: center;
   padding-bottom: 40px;
@@ -306,42 +310,59 @@ margin: 0px;
 animation-name: example;
 animation-duration: 3s;
 position: relative;
+padding-left: 510px;
+
+    overflow: hidden; 
+    /* border-right: .15em solid ;  */
+    white-space: nowrap; 
+    /* margin: 0 auto;  */
+    /* letter-spacing: .15em;  */
+    animation: 
+      typing 2s steps(40, end),
+      blink-caret 2s step-end infinite;
 }
-/* @keyframes example {
-  0%   { left:0px; top:0px;}
-  25%  { left:200px; top:0px;}
-  50%  { left:200px; top:200px;}
-  75%  { left:0px; top:200px;}
-  100% { left:0px; top:0px;}
-} */
+
+@keyframes typing {
+  from { width:0%}
+  to { width: 49% }
+}
+
+/* 
 @keyframes example {
   0%   { left:0px; top:0px;}
   25%  {left:200px; top:0px;}
   50%  {right:400px;top:0px;}
   100% { left:0px; top:0px;}
 
-}
+} */
 #brief3{
   font-family: 'Open Sans Condensed', sans-serif;
   font-size: 35px;
-  background: #faf3e07a;
+  /* background: #faf3e07a; */
   text-align: center;
   margin: 0px;
   animation-name: example;
 animation-duration: 3s;
 position: relative;
-
+margin-right: -251px;
 
 }
+
+#brief4, #brief3{
+padding-left: 350px;
+}
+
 #brief4{
   font-family: 'Open Sans Condensed', sans-serif;
   font-size: 27.5px;
-  background: #faf3e07a;
+  /* background: #faf3e07a; */
   text-align: center;
   margin: 0px;
   animation-name: example;
 animation-duration: 3s;
 position: relative;
+margin-right: -251px;
+
 
 }
 
