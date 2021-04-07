@@ -286,16 +286,19 @@ body{
     }
   #brief{
     font-family: 'Open Sans Condensed', sans-serif;
-    font-size: 40px;
+    font-size: 50px;
     background: #faf3e07a;
     text-align: center;
+    margin: 0px;
 }
 #brief2{
   font-family: 'Dancing Script', cursive;;
-  font-size: 60px;
+  font-size: 130px;
   background: #faf3e07a;
-  color: red;
+  color: rgb(167, 3, 3)	;
   text-align: center;
+  padding-bottom: 40px;
+margin: 0px;
 
 }
 #brief3{
@@ -303,13 +306,16 @@ body{
   font-size: 35px;
   background: #faf3e07a;
   text-align: center;
+  margin: 0px;
+
 
 }
 #brief4{
   font-family: 'Open Sans Condensed', sans-serif;
-  font-size: 30px;
+  font-size: 27.5px;
   background: #faf3e07a;
   text-align: center;
+  margin: 0px;
 
 }
 
