@@ -374,7 +374,7 @@ html {
 }
 
 
-footer {
+/* footer {
   clear: both;
   color: #FFFFFF;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -382,9 +382,16 @@ footer {
   padding-top: 10px;
   padding-bottom: 10px;
   background-color:#000000;
-  margin-top: 185px;
-  width: 102%;
-  margin-left: -1%;
+  margin-top: 144px;
+  width: 100%;
+  margin-left: 0%;
   margin-bottom: -1%;
+  position: relative;
   /* width: 100%; */
-}
+
+  #myCartFooter{
+    margin-top: 144px;
+    margin-bottom: -8px;
+    margin-left: -8px;
+    width: 102%;
+  }
